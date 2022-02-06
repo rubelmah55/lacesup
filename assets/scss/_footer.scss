@@ -9,125 +9,91 @@ footer {
         }
     }
 
-    .footer-widgets-wrapper {
-        padding: 60px 0px 100px;
+    .site-about-wid { 
 
-        @media (max-width: 991px) {
-            padding: 40px 0px 80px;
+        .logo { 
+    
+            a { 
+    
+                img { 
+    
+                }
+            }
+        }
+    
+        .mobile-number { 
+    
+        }
+    
+        .single-contact-info { 
+    
+            .icon { 
+    
+                .icon-mail { 
+    
+                }
+            }
+    
+            .content { 
+    
+            }
         }
     }
 
-    .single-footer-wid {
-        margin-top: 40px;
+    .single-footer-widgets { 
 
-        .wid-title {
-            margin-bottom: 25px;
-
-            @media (min-width: 767px) {
-                margin-top: 20px;
-            }
-
-            h6 {
-                font-weight: 600;
-                color: #fff;
-                font-size: 17px;
+        .wid-title { 
+    
+            p { 
+    
             }
         }
-
-        ul {
-
-            li {
-                
-                a {
-                    margin-top: 8px;
-                    color: #9dacb8;
-                    display: block;
-                    font-size: 15px;
-
-                    &:hover {
-                        color: $third-color;
-                    }
+    
+        ul { 
+    
+            li { 
+    
+                a { 
+    
                 }
             }
         }
     }
 
-    &.footer-2 {
-        background-color: $second-color;
 
-        &.bg-overlay {
-            &::before {
-                opacity: .9;
-            }
+    .newsletter-form { 
+
+        p { 
+    
         }
-
-        .footer-bottom {
-            background: transparent;
-
-            .bottom-content-wrapper { 
-                background: $second-color;
+    
+        form { 
+    
+            input { 
+    
+            }
+    
+            button { 
+    
+                .icon-arrow-long-right { 
+    
+                }
             }
         }
     }
 
-    .footer-bottom {
-        background-color: $theme-color;
+    .social-links { 
 
-        @media (max-width: 767px) {
-            text-align: center;
+        p { 
+    
         }
-
-        .bottom-content-wrapper {
-            background-color: $third-color;
-            padding: 35px 50px;
-
-            @media (max-width: 767px) {
-                padding: 30px;
-            }
     
-            p, b, strong {
-                color: $white;
-                font-size: 16px;
-                text-transform: capitalize;
-            }
+        .social-icon { 
     
-            a {
-                font-weight: 500;
-            }
+            a { 
     
-            ul {
-                li {
-                    display: inline-block;
-
-                    &:first-of-type {
-                        a {
-                            margin-left: 0;
-                        }
-                    }
+                .icon-facebook { 
     
-                    a {
-                        display: inline-block;
-                        margin-left: 15px;
-                        font-size: 15px;
-                        color: #fff;
-                        text-transform: capitalize;
-                    }
-                }
-            }
-        }
-
-        .social-links {
-            a {
-                display: inline-block;
-                margin-right: 15px;
-                color: #fff;
-
-                &:hover {
-                    color: $theme-color;
-                }
-
-                &:last-of-type {
-                    margin-left: 0;
                 }
             }
         }
@@ -135,48 +101,9 @@ footer {
 
 }
 
-.get-in-touch { 
 
-	.single-contact-info { 
-        font-size: 15px;
-        margin-top: 5px;
 
-		.icon { 
-            float: left;
-            overflow: hidden;
-            margin-right: 15px;
-            color: $third-color;
 
-            &.id2 {
-                color: $second-color;
-            }
-
-            &.id3 {
-                color: $info;
-            }
-		}
-
-		.contact-info { 
-            overflow: hidden;
-            color: #9dacb8;
-		}
-	}
-}
-
-.about-transland { 
-    margin-top: 40px;
-
-	a { 
-        display: block;
-	}
-
-	p { 
-        color: #9dacb8;
-        font-size: 15px;
-        margin-top: 20px;
-	}
-
-}
 
 .footer-social-icon { 
     margin-top: 25px;
@@ -191,50 +118,5 @@ footer {
         color: $white;
         font-size: 16px;
         margin-right: 5px;
-    }
-}
-
-.newsletter_widget {
-    .newsletter_box {
-        position: relative;
-        margin-top: 30px;
-
-        input {
-            border: 0px;
-            border-radius: 0;
-            width: 100%;
-            position: relative;
-            background-color: #2c4c63;
-            height: 64px;
-            padding-left: 25px;
-            padding-right: 15px;
-            line-height: 64px;
-            font-size: 14px;
-            color: $second-color;
-            
-            &::placeholder {
-                color: #7d8995;
-            }
-        }
-
-        button {
-            height: 100%;
-            color: #fff;
-            display: inline-block;
-            font-size: 18px;
-            line-height: 1;
-            transition: all .3s ease-in-out;
-            background: $second-color;
-            position: absolute;
-            right: 0;
-            top: 0;
-            width: 70px;
-
-            &:hover {
-                background-color: $third-color;
-                color: #fff;
-            }
-        }
-
     }
 }

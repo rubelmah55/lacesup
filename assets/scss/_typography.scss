@@ -1,15 +1,14 @@
 /* --------------------------------------------
     Template Default Fonts & Fonts Styles
  ---------------------------------------------- */
-
- @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600&family=Roboto:wght@300;400;500;700&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,400&family=Montserrat:ital,wght@0,500;0,600;0,700;1,600&display=swap');
 
 // Font Family Variable with Value
-// font-family: 'Poppins', sans-serif;
-// font-family: 'Roboto', sans-serif;
+// font-family: 'Lato', sans-serif;
+// font-family: 'Montserrat', sans-serif;
 
-$heading-font: 'Poppins', cursive;
-$body-font: 'Roboto', sans-serif;
+$heading-font: 'Montserrat', sans-serif;
+$body-font: 'Lato', sans-serif;
 
 //font-family: "Font Awesome 5 Pro";
 $fa: "Font Awesome 5 Pro";
@@ -18,7 +17,7 @@ body {
     font-family: $body-font;
     font-size: 18px;
     font-weight: 400;
-    line-height: 28px;
+    line-height: 26px;
     color: #666;
     background-color: #fff;
 }
@@ -33,16 +32,16 @@ h6 {
     margin: 0px;
     margin-bottom: 15px;
     font-weight: 700;    
-    color: $theme-color;
-    line-height: 145%;
+    color: #232833;
+    line-height: 130%;
 }
 
 h1 {
-    font-size: 60px;
-    line-height: 1.17;
+    font-size: 46px;
+    line-height: 1.304;
 
     @media (max-width: 991px) {
-        font-size: 42px;
+        font-size: 32px;
     }
 }
 

@@ -16,14 +16,13 @@ $secondary: #F47102;
 // Theme Color - Defualt Colors
 $textcolor: #666;
 $section-bg: #f7f7f7;
-$theme-color: #1f425d;
-$second-color: #4ab9cf;
-$third-color: #fd7062;
+$theme-color: #8097D1;
+$second-color: #EE4F4F;
+$third-color: #232833;
 
 $box-shadow: 0px 15px 40px 0px rgba(109, 109, 109, 0.06);
 
 $sticky-bg-1: $theme-color;
-$sticky-bg-2: $third-color;
 
 
 @mixin border-radius($r) {
