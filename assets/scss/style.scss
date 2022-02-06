@@ -21,10 +21,7 @@ Version: 1.0.0
 // Button 
 @import 'btn';
 // Preloader 
-@import 'preloader';
-
-// WP Default CSS - Style
-// @import 'wp';
+// @import 'preloader';
 
 /* ----------------------------------
     Template Section Styles
@@ -42,35 +39,11 @@ Version: 1.0.0
 // About - Section 
 @import 'about';
 
-// Features - Section 
-@import 'features';
-
-// services - Section 
-@import 'services';
-
-// testimonial - Section 
-@import 'testimonial';
-
-// price - Section 
-@import 'price';
-
-// Call To Action - Section 
-@import 'cta';
-
-// team - Section 
-@import 'team';
-
-// funfact - Section 
-@import 'funfact';
-
-// project - Section 
-@import 'project';
+// WooCommerces - Products
+@import 'woo';
 
 // FAQ - Section 
 @import 'faq';
-
-// Blog - Section 
-@import 'blog';
 
 // Contact Us - Section 
 @import 'contact';
