@@ -1,43 +1,56 @@
+.faq-wrapper {
+    padding-top: 120px;
+    padding-bottom: 160px;
+
+    h1 {
+        margin-bottom: 60px;
+
+        @media (max-width: 991px) {
+            margin-bottom: 40px;
+        }
+    }
+
+    @media (max-width: 991px) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    @media (max-width: 767px) {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+}
+
 
 .faq-accordion { 
-    .accordion { 
-        list-style-type: none;
-        counter-reset: css-counter 0;
+    background: #FFFFFF;
+    box-shadow: 28px 28px 120px rgba(44, 34, 83, 0.06);
+    border-radius: 12px;
+    padding: 70px 70px 105px;
 
-        @media (max-width: 500px) {
-            padding: 30px 15px
-        }
+    @media (max-width: 991px) {
+        padding: 50px;
+    }
 
+    @media (max-width: 767px) {
+        padding: 40px 20px 60px;
+    }
+
+    .accordion {
+        margin-top: 40px;
 
         .accordion-item { 
             border: 0;
             border-radius: 0;
-            counter-increment: css-counter 1;
             position: relative;
             z-index: 1;
-            padding-top: 20px;
             background: transparent;
-
-            &:first-of-type {
-                padding-top: 0;
-            }
-
-            &::before {
-                position: absolute;
-                left: 25px;
-                top: 0;
-                content: "";
-                border: 1px dashed $second-color;
-                width: 1px;
-                height: 100%;
-                z-index: -1;
-                transform: translateX(-50%);
-                opacity: .5;
-            }
+            border-bottom: 1px solid #666;
+            padding-top: 10px;
+            padding-bottom: 10px;
 
             .accordion-header {
                 font-size: inherit;
-                line-height: inherit;
                 position: relative;
                 z-index: 1;
 
@@ -47,17 +60,13 @@
                 }
                 
                 .accordion-button {
-                    padding-left: 70px;
-                    font-size: 20px;
-                    font-weight: 600;
-                    color: $theme-color;
-                    overflow: hidden;
-                    background-color: transparent;
-                    padding-top: 10px;
+                    font-size: 22px;
+                    color: $third-color;
+                    font-family: $body-font;
+                    font-weight: 400;
 
-                    @media (max-width: 500px) {
-                        padding: 0px;
-                        padding-left: 60px;
+                    @media (max-width: 767px) {
+                        font-size: 18px;
                     }
 
                     &:focus {
@@ -65,29 +74,36 @@
                     }
 
                     &:not(.collapsed) {
-                        color: $theme-color;
                         background-color: transparent;
                         box-shadow: none;
+
+                        &::after {
+                            width: auto;
+                            height: auto;
+                            background-image: none;
+                            content: "\e806";
+                            font-size: 18px;
+                            transform: translate(-5px, -4px);
+                            transform: rotate(0deg);
+                            font-family: "lacesup";
+                            @media (max-width: 767px) {
+                                font-size: 15px;
+                            }
+                        }
                     }
 
                     &::after {
-                        display: none;
-                    }
-
-                    &::before {
-                        content: counter(css-counter);
-                        position: absolute;
-                        width: 50px;
-                        height: 50px;
-                        background: #fff;
-                        border: 1px solid #ebedf2;
-                        border-radius: 50px;
-                        color: $second-color;
-                        font-weight: 700;
+                        width: auto;
+                        height: auto;
+                        content: "\e807";
+                        font-family: "lacesup";
+                        background-image: none;
                         font-size: 18px;
-                        line-height: 50px;
-                        text-align: center;
-                        left: 0;
+                        transform: translateY(-4px);
+
+                        @media (max-width: 767px) {
+                            font-size: 15px;
+                        }
                     }
 
                 }
@@ -96,11 +112,7 @@
             .accordion-collapse { 
 
                 .accordion-body { 
-                    padding-left: 70px;
-
-                    @media (max-width: 500px) {
-                        padding-left: 60px;
-                    }
+                    font-size: 16px;
                 }
             }
         }

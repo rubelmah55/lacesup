@@ -4287,48 +4287,72 @@ header.header-wrapper .main-menu ul > li > ul ul {
   font-size: 16px;
 }
 
-.faq-accordion .accordion {
-  list-style-type: none;
-  counter-reset: css-counter 0;
+.faq-wrapper {
+  padding-top: 120px;
+  padding-bottom: 160px;
 }
 
-@media (max-width: 500px) {
-  .faq-accordion .accordion {
-    padding: 30px 15px;
+.faq-wrapper h1 {
+  margin-bottom: 60px;
+}
+
+@media (max-width: 991px) {
+  .faq-wrapper h1 {
+    margin-bottom: 40px;
   }
+}
+
+@media (max-width: 991px) {
+  .faq-wrapper {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+@media (max-width: 767px) {
+  .faq-wrapper {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+.faq-accordion {
+  background: #FFFFFF;
+  -webkit-box-shadow: 28px 28px 120px rgba(44, 34, 83, 0.06);
+          box-shadow: 28px 28px 120px rgba(44, 34, 83, 0.06);
+  border-radius: 12px;
+  padding: 70px 70px 105px;
+}
+
+@media (max-width: 991px) {
+  .faq-accordion {
+    padding: 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  .faq-accordion {
+    padding: 40px 20px 60px;
+  }
+}
+
+.faq-accordion .accordion {
+  margin-top: 40px;
 }
 
 .faq-accordion .accordion .accordion-item {
   border: 0;
   border-radius: 0;
-  counter-increment: css-counter 1;
   position: relative;
   z-index: 1;
-  padding-top: 20px;
   background: transparent;
-}
-
-.faq-accordion .accordion .accordion-item:first-of-type {
-  padding-top: 0;
-}
-
-.faq-accordion .accordion .accordion-item::before {
-  position: absolute;
-  left: 25px;
-  top: 0;
-  content: "";
-  border: 1px dashed #EE4F4F;
-  width: 1px;
-  height: 100%;
-  z-index: -1;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  opacity: .5;
+  border-bottom: 1px solid #666;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .faq-accordion .accordion .accordion-item .accordion-header {
   font-size: inherit;
-  line-height: inherit;
   position: relative;
   z-index: 1;
 }
@@ -4339,19 +4363,15 @@ header.header-wrapper .main-menu ul > li > ul ul {
 }
 
 .faq-accordion .accordion .accordion-item .accordion-header .accordion-button {
-  padding-left: 70px;
-  font-size: 20px;
-  font-weight: 600;
-  color: #8097D1;
-  overflow: hidden;
-  background-color: transparent;
-  padding-top: 10px;
+  font-size: 22px;
+  color: #232833;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 767px) {
   .faq-accordion .accordion .accordion-item .accordion-header .accordion-button {
-    padding: 0px;
-    padding-left: 60px;
+    font-size: 18px;
   }
 }
 
@@ -4360,40 +4380,49 @@ header.header-wrapper .main-menu ul > li > ul ul {
 }
 
 .faq-accordion .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {
-  color: #8097D1;
   background-color: transparent;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-.faq-accordion .accordion .accordion-item .accordion-header .accordion-button::after {
-  display: none;
+.faq-accordion .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed)::after {
+  width: auto;
+  height: auto;
+  background-image: none;
+  content: "\e806";
+  font-size: 18px;
+  -webkit-transform: translate(-5px, -4px);
+          transform: translate(-5px, -4px);
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  font-family: "lacesup";
 }
 
-.faq-accordion .accordion .accordion-item .accordion-header .accordion-button::before {
-  content: counter(css-counter);
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  background: #fff;
-  border: 1px solid #ebedf2;
-  border-radius: 50px;
-  color: #EE4F4F;
-  font-weight: 700;
+@media (max-width: 767px) {
+  .faq-accordion .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed)::after {
+    font-size: 15px;
+  }
+}
+
+.faq-accordion .accordion .accordion-item .accordion-header .accordion-button::after {
+  width: auto;
+  height: auto;
+  content: "\e807";
+  font-family: "lacesup";
+  background-image: none;
   font-size: 18px;
-  line-height: 50px;
-  text-align: center;
-  left: 0;
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
+}
+
+@media (max-width: 767px) {
+  .faq-accordion .accordion .accordion-item .accordion-header .accordion-button::after {
+    font-size: 15px;
+  }
 }
 
 .faq-accordion .accordion .accordion-item .accordion-collapse .accordion-body {
-  padding-left: 70px;
-}
-
-@media (max-width: 500px) {
-  .faq-accordion .accordion .accordion-item .accordion-collapse .accordion-body {
-    padding-left: 60px;
-  }
+  font-size: 16px;
 }
 
 .contact-form {
