@@ -1,27 +1,33 @@
 .contact-form {
-    padding-top: 40px;
+    padding: 54px 50px;
+    background-color: #FBFBFD;
+    margin-top: 70px;
 
-    @media (max-width: 585px) {
-        padding-top: 20px;
-    }
 
     .single-personal-info {
         margin-bottom: 20px;
     }
 
     input,
-    textarea {
+    textarea,
+    select {
         width: 100%;
-        background: #f8f8f8;
+        background: #fff;
         line-height: 1;
-        padding: 25px 30px;
+        padding: 15px 27px;
         border: 0px;
+        color: #777777;
+        font-size: 16px;
 
         @media (max-width: 585px) {
             padding: 15px;
             font-size: 13px;
         }
 
+    }
+
+    select {
+        display: block;
     }
 
     textarea {
@@ -32,32 +38,31 @@
         }
     }
 
-    label {
-        color: #202426;
-        font-weight: 700;
-        font-size: 14px;
+    label, span {
+        color: #777777;
+        font-size: 18px;
         margin-bottom: 10px;
         text-transform: capitalize;
-
-        span {
-            color: #727475;
-            margin-left: 5px;
-        }
+        display: block;
     }
 
     input[type='submit'],
     .submit-btn {
-        background: $second-color;
+        background: $theme-color;
         color: #fff;
-        font-weight: 700;
-        line-height: 1;
-        padding: 25px 40px;
+        line-height: 56px;
+        height: 56px;
         transition: all .3s ease-in-out;
-        width: 280px;
+        width: 300px;
+        border-radius: 4px;
+        font-size: 20px;
+        padding: 0;
+        text-transform: capitalize;
+        margin-top: 40px;
 
         &.active,
         &:hover {
-            background-color: $theme-color;
+            background-color: $third-color;
         }
 
         i {
