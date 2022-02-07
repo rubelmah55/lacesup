@@ -2991,9 +2991,8 @@ header.header-wrapper .main-menu ul > li > ul ul {
 }
 
 .breadcrumb-wrapper {
-  background-color: #f8f8f8;
   padding: 20px 0px;
-  color: #EE4F4F;
+  color: #232833;
 }
 
 .breadcrumb-wrapper a:hover {
@@ -3010,21 +3009,27 @@ header.header-wrapper .main-menu ul > li > ul ul {
   font-size: 15px;
   font-weight: 500;
   text-transform: capitalize;
+  padding-right: 4px;
+}
+
+.breadcrumb-wrapper .breadcrumb .breadcrumb-item.active {
+  padding-left: 10px;
 }
 
 .breadcrumb-wrapper .breadcrumb .breadcrumb-item a {
-  color: #EE4F4F;
+  color: #232833;
   font-weight: 500;
 }
 
 .breadcrumb-wrapper .breadcrumb .breadcrumb-item a:hover {
-  color: #8097D1;
+  color: #EE4F4F;
 }
 
 .breadcrumb-wrapper .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
-  content: "\f054";
+  content: "\e800";
   font-family: "Font Awesome 5 Pro";
   font-size: 14px;
+  font-family: "lacesup";
 }
 
 .mobile-nav {
@@ -4165,6 +4170,18 @@ header.header-wrapper .main-menu ul > li > ul ul {
   padding-right: 20px;
 }
 
+.nice-draw {
+  position: absolute;
+  right: 10%;
+  top: 0;
+}
+
+@media (max-width: 767px) {
+  .nice-draw {
+    display: none;
+  }
+}
+
 .social-join-card-wrapper {
   overflow: hidden;
   background-color: #F8F8F8;
@@ -4285,6 +4302,55 @@ header.header-wrapper .main-menu ul > li > ul ul {
 
 .single-social-box .content p {
   font-size: 16px;
+}
+
+.promo-offer-wrapper {
+  padding-top: 80px;
+  padding-bottom: 160px;
+  position: relative;
+}
+
+@media (max-width: 991px) {
+  .promo-offer-wrapper {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+.block-contents h1 {
+  font-weight: 500;
+  margin-bottom: 35px;
+}
+
+.block-contents h6 {
+  font-weight: 500;
+}
+
+.block-contents ul {
+  margin-top: 25px;
+}
+
+.block-contents ul li {
+  position: relative;
+  padding-left: 28px;
+  margin-top: 25px;
+}
+
+@media (min-width: 991px) {
+  .block-contents ul li {
+    padding-right: 40px;
+  }
+}
+
+.block-contents ul li::before {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #666;
+  border-radius: 50%;
+  content: "";
+  left: 0;
+  top: 10px;
 }
 
 .faq-wrapper {
@@ -4521,7 +4587,6 @@ header.header-wrapper .main-menu ul > li > ul ul {
 
 .contact-us-content h1, .contact-us-content h2, .contact-us-content h3, .contact-us-content h4, .contact-us-bottom-content h1, .contact-us-bottom-content h2, .contact-us-bottom-content h3, .contact-us-bottom-content h4 {
   font-weight: 400;
-  font-family: "Lato", sans-serif;
 }
 
 footer {
@@ -4637,6 +4702,7 @@ footer .newsletter-form form input {
   font-size: 16px;
   line-height: 46px;
   padding: 0px 15px;
+  background: transparent;
 }
 
 footer .newsletter-form form button {

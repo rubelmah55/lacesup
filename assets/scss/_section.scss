@@ -189,3 +189,13 @@
         padding-right: 20px;
     }
 }
+
+.nice-draw {
+    position: absolute;
+    right: 10%;
+    top: 0;
+
+    @media (max-width: 767px) {
+        display: none;
+    }
+}

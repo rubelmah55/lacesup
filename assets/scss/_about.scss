@@ -114,3 +114,67 @@
 		}
 	}
 }
+
+.promo-offer-wrapper {
+    padding-top: 80px;
+    padding-bottom: 160px;
+    position: relative;
+
+    @media (max-width: 991px) {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+}
+
+.block-contents { 
+
+	h1 { 
+        font-weight: 500;
+        margin-bottom: 35px;
+	}
+
+	h6 { 
+        font-weight: 500;
+	}
+
+    ul {
+        margin-top: 25px;
+
+        li { 
+            position: relative;
+            padding-left: 28px;
+            margin-top: 25px;
+            
+            @media (min-width: 991px) {
+                padding-right: 40px;
+            }
+
+            &::before {
+                position: absolute;
+                width: 8px;
+                height: 8px;
+                background-color: #666;
+                border-radius: 50%;
+                content: "";
+                left: 0;
+                top: 10px;
+            }
+        }
+    }
+
+
+	.terms-wrapper { 
+
+		h2 { 
+
+		}
+
+	}
+
+	.promo-bottom-content { 
+
+		h3 { 
+
+		}
+	}
+}

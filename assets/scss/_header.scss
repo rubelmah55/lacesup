@@ -276,9 +276,8 @@ header {
 }
 
 .breadcrumb-wrapper {
-    background-color: #f8f8f8;
     padding: 20px 0px;
-    color: $second-color;
+    color: $third-color;
 
     a {
         &:hover {
@@ -294,23 +293,29 @@ header {
         .breadcrumb-item {
             font-size: 15px;
             font-weight: 500;
-            text-transform: capitalize;          
+            text-transform: capitalize;
+            padding-right: 4px;
+            
+            &.active {
+                padding-left: 10px;
+            }
 
             a {
-                color: $second-color;
+                color: $third-color;
                 font-weight: 500;
 
                 &:hover {
-                    color: $theme-color;
+                    color: $second-color;
                 }
             }            
         }
 
         .breadcrumb-item + .breadcrumb-item {
             &::before {
-                content: "\f054";
+                content: "\e800";
                 font-family: $fa;
                 font-size: 14px;
+                font-family: "lacesup";
             }
         }
         
