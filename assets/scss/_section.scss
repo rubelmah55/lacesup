@@ -153,3 +153,39 @@
         }
     }
 }
+
+.padding-160 {
+    padding: 160px 0px;
+
+    @media (max-width: 1199px) {
+        padding: 120px 0px;
+    }
+    
+    @media (max-width: 991) {
+        padding: 100px 0px;
+    }
+
+    @media (max-width: 767px) {
+        padding: 80px 0px;
+    }
+}
+
+.lr-25 {
+    margin-left: -25px;
+    margin-right: -25px;
+
+    [class*="col"] {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
+.lr-20 {
+    margin-left: -20px;
+    margin-right: -20px;
+
+    [class*="col"] {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}

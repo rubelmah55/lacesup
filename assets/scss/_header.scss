@@ -204,11 +204,27 @@ header {
     background-color: #202022;
     padding: 22px 0px;
 
+    @media (max-width: 991px) {
+        padding: 15px 0px;
+    }
+
+    @media (max-width: 767px) {
+        padding: 10px 0px;
+    }
+
     .promo-heading { 
 
         span { 
             font-size: 16px;
             line-height: 24px;
+
+            @media (max-width: 991px) {
+                font-size: 14px;
+            }
+
+            @media (max-width: 767px) {
+                font-size: 13px;
+            }
         }
     }
 }
@@ -216,11 +232,10 @@ header {
 .page-banner-wrap {
     background-color: $theme-color;
     padding-top: 115px;
-    padding-bottom: 105px;
+    padding-bottom: 135px;
     position: relative;
     z-index: 1;
     background-repeat: no-repeat;
-    background-position: bottom;
     background-size: cover;
 
     @media (max-width: 991px) {
@@ -238,20 +253,21 @@ header {
         padding-bottom: 70px;
     }
 
-    &::before, &::after {
+    &::before{
         position: absolute;
         left: 0;
         content: "";
         top: 0;
-        background: $theme-color;
+        background: rgba(47, 54, 62, 0.45);
         width: 100%;
         height: 100%;
-        opacity: .40;
         z-index: -1;
     }
 
     h1 {
         text-transform: capitalize;
+        font-size: 64px;
+        line-height: 74px;
     }
   
 }
