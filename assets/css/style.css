@@ -2718,6 +2718,12 @@ header ul {
   margin: 0;
 }
 
+@media (min-width: 992px) {
+  header.header-wrapper {
+    margin-bottom: 20px;
+  }
+}
+
 header.header-wrapper hr {
   border-bottom: 1.2px solid #C4C4C6;
 }
@@ -4161,6 +4167,9 @@ header.header-wrapper .main-menu ul > li > ul ul {
 
 .social-join-card-wrapper {
   overflow: hidden;
+  background-color: #F8F8F8;
+  padding-top: 65px;
+  padding-bottom: 75px;
 }
 
 .social-join-card-wrapper .join-social-card {

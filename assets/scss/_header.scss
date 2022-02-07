@@ -7,7 +7,10 @@ header {
         margin: 0;
     }
 
-    &.header-wrapper { 
+    &.header-wrapper {
+        @media (min-width: 992px) {
+            margin-bottom: 20px;
+        }
         
         hr {
             border-bottom: 1.2px solid #C4C4C6;
