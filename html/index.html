@@ -81,82 +81,44 @@
 
                 <div class="d-block d-lg-none col-sm-1 col-md-8 col-6">
                     <div class="mobile-nav-wrap">
-                        <div id="hamburger"><i class="fal fa-bars"></i></div>
+                        <div id="hamburger"><i class="icon-menu"></i></div>
                         <!-- mobile menu - responsive menu  -->
                         <div class="mobile-nav">
                             <button type="button" class="close-nav">
-                                <i class="fal fa-times-circle"></i>
+                                <i class="icon-cancel"></i>
                             </button>
                             <nav class="sidebar-nav">
                                 <ul class="metismenu" id="mobile-menu">
-                                    <li><a class="has-arrow" href="#">Homes</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="index.html">Homepage 1</a></li>
-                                            <li><a href="index-2.html">Homepage 2</a></li>
-                                            <li><a href="index-3.html">Homepage 3</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="about.html">about</a></li>
-                                    <li><a href="services.html">services</a></li>
-                                    <li>
-                                        <a class="has-arrow" href="#">Pages</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="faq.html">faq</a></li>
-                                            <li><a href="services-details.html">services details</a></li>
-                                            <li><a href="team.html">Team</a></li>
-                                            <li><a href="404.html">404</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="news.html">News</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="man.html">man</a></li>
+                                    <li><a href="women.html">women</a></li>
+                                    <li><a href="kids.html">kids</a></li>
+                                    <li><a href="brends.html">brends</a></li>
+                                    <li><a href="shop.html">sale</a></li>
                                 </ul>
                             </nav>
 
                             <div class="action-bar text-white">
-                                <div class="single-info-element">
-                                    <div class="icon">
-                                        <i class="fal fa-map-marked-alt"></i>
-                                    </div>
-                                    <div class="text">
-                                        <h5>visit our location:</h5>
-                                        <span>West Jakarta City, UK</span>
-                                    </div>
+                                <div class="search-box ms-0">
+                                    <form action="#">
+                                        <input type="text" placeholder="Search">
+                                        <i class="icon-search"></i>
+                                    </form>
                                 </div>
-                                <div class="single-info-element">
-                                    <div class="icon">
-                                        <i class="fal fa-clock"></i>
-                                    </div>
-                                    <div class="text">
-                                        <h5>Opening Hours:</h5>
-                                        <span>Mon-Fri 8am-5pm</span>
-                                    </div>
+                                <div class="product-cart mt-3">
+                                    <a href="#"><i class="icon-cart "></i></a>
                                 </div>
-                                <div class="single-info-element">
-                                    <div class="icon">
-                                        <i class="fal fa-envelope"></i>
-                                    </div>
-                                    <div class="text">
-                                        <h5>Send us mail</h5>
-                                        <span>info@example.com</span>
-                                    </div>
+                                <div class="user-login ms-0 mt-3">
+                                    <a href="#"><i class="icon-user"></i></a>
                                 </div>
-                                <div class="call-us">
-                                    <div class="icon text-white">
-                                        <i class="fal fa-phone-volume"></i>
-                                    </div>
-                                    <div class="text">
-                                        <h5>Troll fre number</h5>
-                                        <span>+09 949 858327</span>
-                                    </div>
-                                </div>
-                                <a href="contact.html" class="theme-btn mt-4">Track Your Shipment</a>
+                                <a href="shop.html" class="theme-btn mt-4">shop now <i class="icon-arrow-right-top"></i></a>
                             </div>
                         </div> 
                     </div>
                     <div class="overlay"></div>
                 </div>
             </div>
-            <hr>
+            <hr class="d-none d-lg-block">
         </div>
     </header>
 
@@ -164,7 +126,7 @@
         <div class="footer-widgets-wrapper">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 col-sm-6">
                         <div class="single-footer-widgets site-about-wid">
                             <div class="logo">
                                 <a href="index.html">
@@ -182,7 +144,7 @@
                             </div>
                             <div class="single-contact-info">
                                 <div class="icon">
-                                    <i class="icon-mail"></i>
+                                    <i class="icon-map-marker"></i>
                                 </div>
                                 <div class="content">
                                     25/B Globe House Ave. Point <br> Beach, London
@@ -190,7 +152,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-2 offset-lg-1">
+                    <div class="col-lg-2 offset-lg-1 col-sm-6">
                         <div class="single-footer-widgets">
                             <div class="wid-title">
                                 <p>Customer Service</p>
@@ -203,7 +165,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-2 offset-lg-1">
+                    <div class="col-lg-2 ps-lg-0 offset-lg-1 col-sm-6">
                         <div class="single-footer-widgets">
                             <div class="wid-title">
                                 <p>About Us</p>
@@ -216,13 +178,13 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-3 text-lg-end">
-                        <div class="single-footer-widgets">
+                    <div class="col-lg-3 text-lg-end col-sm-6">
+                        <div class="single-footer-widgets text-start">
                             <div class="newsletter-form">
                                 <p>Email Newsletter</p>
                                 <form action="#">
                                     <input type="email" placeholder="Enter Email">
-                                    <button type="submit"><i class="icon-arrow-long-right"></i></button>
+                                    <button type="submit"><i class="icon-right"></i></button>
                                 </form>
                             </div>
                             
@@ -244,13 +206,13 @@
         <div class="footer-bottom-wrapper">
             <div class="container">
                 <hr>
-                <div class="row">
+                <div class="row text-center text-lg-start">
                     <div class="col-lg-6 col-12">
                         <div class="site-copyright">
                             <p>Copyright ©2022 Lacesup. All Rights Reserved Copyright</p>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-12">
+                    <div class="col-lg-6 col-12 mt-4 mt-lg-0 text-lg-end">
                         <div class="footer-menu">
                             <ul>
                                 <li><a href="#">Privacy policy</a></li>
