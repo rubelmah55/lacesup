@@ -12,10 +12,12 @@
     textarea,
     select {
         width: 100%;
-        background: #fff;
+        background: transparent;
         line-height: 1;
         padding: 15px 27px;
-        border: 0px;
+        border: 1px solid #666666;
+        box-sizing: border-box;
+        border-radius: 4px;
         color: #777777;
         font-size: 16px;
 
@@ -31,10 +33,10 @@
     }
 
     textarea {
-        height: 220px;
+        height: 120px;
 
         @media (max-width: 767px) {
-            height: 160px;
+            height: 90px;
         }
     }
 
@@ -72,5 +74,16 @@
         @media (max-width: 400px) {
             width: 100%;
         }
+    }
+}
+
+.contact-us-bottom-content {
+    padding-top: 80px;
+}
+
+.contact-us-content, .contact-us-bottom-content {
+    h1,h2,h3,h4 {
+        font-weight: 400;
+        font-family: $body-font;
     }
 }
