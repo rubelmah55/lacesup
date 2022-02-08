@@ -170,6 +170,16 @@
     }
 }
 
+.lr-12 {
+    margin-left: -12px;
+    margin-right: -12px;
+
+    [class*="col"] {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
+
 .lr-25 {
     margin-left: -25px;
     margin-right: -25px;

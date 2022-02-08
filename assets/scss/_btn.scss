@@ -15,11 +15,12 @@
     @extend .btnd;    
     padding: 15px 42px;
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 500;
     color: $white;
     background-color: $theme-color;
     border: 1px solid $theme-color;
     transition: all .3s ease-in-out;
+    border-radius: 7px;
 
     @media (max-width: 580px) {
         padding: 12px 34px;
