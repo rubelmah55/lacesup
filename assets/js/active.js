@@ -5,18 +5,46 @@
     $(document).ready( function() {
 
         new WOW().init();        
-
-        if($('.hero-1 .hero-slider-active').length > 0) {
-            $('.hero-1 .hero-slider-active').slick({
-                autoplay: true,
-                speed: 1500,
-                lazyLoad: 'progressive',
+        
+        if($('.brand-carousel-active').length > 0) {
+            $('.brand-carousel-active').slick({
+                infinite: false,
+                slidesToShow: 2, 
+                slidesToScroll: 2, 
                 arrows: true,
-                dots: false,
-                prevArrow: '<div class="slick-nav prev-arrow"><i></i><svg><use xlink:href="#circle"></svg></div>',
-                nextArrow: '<div class="slick-nav next-arrow"><i></i><svg><use xlink:href="#circle"></svg></div>',
-            }).slickAnimation();
-        }        
+                speed: 800,
+                prevArrow: $('.collection-nav-prev'),
+                nextArrow: $('.collection-nav-next'),
+                responsive: [
+                    {
+                      breakpoint: 1600,
+                      settings: {
+                        slidesToShow: 2
+                      }
+                    },
+                    {
+                      breakpoint: 1191,
+                      settings: {
+                        slidesToShow: 2
+                      }
+                    },
+                    {
+                      breakpoint: 768,
+                      settings: {
+                        slidesToShow: 1,
+                        center: true,
+                      }
+                    },
+                    {
+                      breakpoint: 480,
+                      settings: {
+                        slidesToShow: 1
+                      }
+                    }
+                ],
+
+            });
+        }       
 
         /*==========================
            Scroll To Up Init

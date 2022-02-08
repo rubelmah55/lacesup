@@ -24,11 +24,16 @@
 
     @media (max-width: 580px) {
         padding: 12px 34px;
-        font-size: 14px;
+        font-size: 16px;
     }
 
     i {
         margin-left: 10px;
+        line-height: 1;
+
+        &::before {
+            font-size: 12px;
+        }
     }
 
 

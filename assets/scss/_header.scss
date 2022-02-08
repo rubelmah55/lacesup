@@ -7,6 +7,19 @@ header {
         margin: 0;
     }
 
+    &.sticky {
+        top: 0 !important;
+        width: 100%;
+        position: fixed !important;      
+        background: #fff;
+        animation: sticky .8s ease-in-out;
+        box-shadow: 0 13px 35px -12px rgba(35,35,35,.15);
+     
+        @media (max-width: 767px) {
+            position: relative;
+        }
+    }
+
     &.header-wrapper {
         @media (min-width: 992px) {
             margin-bottom: 20px;
@@ -15,23 +28,6 @@ header {
         hr {
             border-bottom: 1.2px solid #C4C4C6;
         }
-
-        // &.sticky {
-        //     top: 0 !important;
-        //     width: 100%;
-        //     position: fixed !important;      
-        //     background: #fff;
-        //     animation: sticky .8s ease-in-out;
-        //     box-shadow: 0 13px 35px -12px rgba(35,35,35,.15);
-         
-        //     @media (max-width: 767px) {
-        //         position: relative;
-        //     }
-
-        //     .theme-btn {
-        //         padding: 14px 30px;
-        //     }
-        // }
 
         @media (max-width: 1100px) {
             padding: 15px 0px;
