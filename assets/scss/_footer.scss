@@ -264,3 +264,27 @@ footer {
         grid-template-columns: 1fr;;
     }
 }
+
+.page-nav-wrap { 
+
+	ul { 
+
+		li { 
+            display: inline-block;
+
+			.page-numbers { 
+                width: 70px;
+                height: 70px;
+                border: 1px solid #666666;
+                box-sizing: border-box;
+                border-radius: 2px;
+                display: inline-block;
+                margin-right: 20px;
+                line-height: 70px;
+                text-align: center;
+                color: #666666;
+                font-size: 26px;
+			}
+		}
+	}
+}
