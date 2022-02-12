@@ -237,3 +237,62 @@
     }
 
 }
+
+
+.filter-bar {
+    margin-top: -60px;
+    position: relative;
+    z-index: 3;
+    background: #FFFFFF;
+    box-shadow: 18px 18px 32px rgba(26, 29, 33, 0.06);
+    border-radius: 12px;
+    overflow: hidden;
+    min-height: 120px;
+
+    img {
+        width: 100%;
+    }
+}
+
+
+.single-promo-product-card {
+    margin-top: 35px;
+
+	.product-thumb { 
+        height: 210px;
+        width: 100%;
+        background: #E2FBE6;
+        border-radius: 12px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+	}
+
+	.product-content {
+        margin-top: 18px;
+
+		a { 
+            text-transform: capitalize;
+            color: #232833;    
+        }
+
+        .product-price { 
+            color: #666666;
+        }
+
+		.promo-code { 
+            border: 1px solid #666666;
+            box-sizing: border-box;
+            border-radius: 6px;
+            font-size: 14px;
+            padding: 8px 16px;
+            text-align: center;
+            display: block;
+            margin-top: 12px;
+
+			span { 
+                text-transform: uppercase;
+			}
+		}
+	}
+}
