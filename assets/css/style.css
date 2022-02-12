@@ -3350,7 +3350,7 @@ header.header-wrapper .main-menu ul > li > ul ul {
   -webkit-transform: translateY(-50%) rotate(-90deg);
           transform: translateY(-50%) rotate(-90deg);
   color: #E4E6E9;
-  left: auto;
+  right: 0px;
 }
 
 @media (min-width: 1400px) {
@@ -3365,7 +3365,13 @@ header.header-wrapper .main-menu ul > li > ul ul {
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1600px) {
+  .hero-wrapper .rotate-big-text {
+    font-size: 120px;
+  }
+}
+
+@media (max-width: 1400px) {
   .hero-wrapper .rotate-big-text {
     font-size: 90px;
   }
