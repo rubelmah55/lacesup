@@ -1,4 +1,7 @@
 <?php 
+	/*
+	Template Name: Home
+	*/
     get_header();
  ?>
 
@@ -13,13 +16,13 @@
                             <p>For a party, you should be wearing shoes that are comfortable as well as matching your outfit so they can complement.</p>
                             <a href="shop.html" class="theme-btn mt-4">shop now <i class="icon-arrow-right-top"></i></a>
                             <div class="arrow-icon">
-                                <img src="../assets/img/hero-arrow-icon.png" alt="">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hero-arrow-icon.png" alt="">
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-6">
                         <div class="hero-img-wrapper text-xl-end mt-4 mt-lg-0">
-                            <img src="../assets/img/hero-puma.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hero-puma.png" alt="">
                         </div>
                         <div class="products-info-funfact d-lg-flex justify-content-lg-between">
                             <div class="product-rating mt-5 mt-lg-0">
@@ -74,7 +77,7 @@
                         </div>
                     </div>
                     <div class="brand-item-img">
-                        <img src="../assets/img/product-carousel/red.png" alt="Nike">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/product-carousel/red.png" alt="Nike">
                     </div>
                 </div>
                 <div class="single-brand-item">
@@ -85,7 +88,7 @@
                         </div>
                     </div>
                     <div class="brand-item-img">
-                        <img src="../assets/img/product-carousel/black.png" alt="Adidas">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/product-carousel/black.png" alt="Adidas">
                     </div>
                 </div>
                 <div class="single-brand-item">
@@ -96,7 +99,7 @@
                         </div>
                     </div>
                     <div class="brand-item-img">
-                        <img src="../assets/img/product-carousel/red.png" alt="Nike">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/product-carousel/red.png" alt="Nike">
                     </div>
                 </div>
                 <div class="single-brand-item">
@@ -107,7 +110,7 @@
                         </div>
                     </div>
                     <div class="brand-item-img">
-                        <img src="../assets/img/product-carousel/black.png" alt="Adidas">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/product-carousel/black.png" alt="Adidas">
                     </div>
                 </div>
             </div>
@@ -124,7 +127,7 @@
                 </div>
                 <div class="col-lg-6 col-xl-7">
                     <div class="shoes-img">
-                        <img src="../assets/img/black-light.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/black-light.png" alt="">
                     </div>
                 </div>
             </div>
@@ -138,7 +141,7 @@
                 <div class="row lr-12">
                     <div class="col-sm-6 col-md-4 col-lg-3">
                         <div class="single-product-card">
-                            <div class="product-thumb bg-cover" style="background-image: url('../assets/img/life-style/1.jpg');"></div>
+                            <div class="product-thumb bg-cover" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/life-style/1.jpg');"></div>
                             <div class="product-content">
                                 <a href="product-details.html">Men's Rockport Margin Oxford</a>
                                 <div class="d-flex">
@@ -150,7 +153,7 @@
                     </div>
                     <div class="col-sm-6 col-md-4 col-lg-3">
                         <div class="single-product-card">
-                            <div class="product-thumb bg-cover" style="background-image: url('../assets/img/life-style/2.jpg');"></div>
+                            <div class="product-thumb bg-cover" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/life-style/2.jpg');"></div>
                             <div class="product-content">
                                 <a href="product-details.html">Men's Fila Fulcrum 3</a>
                                 <div class="d-flex">
@@ -162,7 +165,7 @@
                     </div>
                     <div class="col-sm-6 col-md-4 col-lg-3">
                         <div class="single-product-card">
-                            <div class="product-thumb bg-cover" style="background-image: url('../assets/img/life-style/3.jpg');"></div>
+                            <div class="product-thumb bg-cover" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/life-style/3.jpg');"></div>
                             <div class="product-content">
                                 <a href="product-details.html">Men's Fila Fulcrum 3</a>
                                 <div class="d-flex">
@@ -174,7 +177,7 @@
                     </div>
                     <div class="col-sm-6 col-md-4 col-lg-3">
                         <div class="single-product-card">
-                            <div class="product-thumb bg-cover" style="background-image: url('../assets/img/life-style/4.jpg');"></div>
+                            <div class="product-thumb bg-cover" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/life-style/4.jpg');"></div>
                             <div class="product-content">
                                 <a href="product-details.html">Men's Fila Fulcrum 3</a>
                                 <div class="d-flex">
@@ -186,7 +189,7 @@
                     </div>
                     <div class="col-sm-6 col-md-4 col-lg-3">
                         <div class="single-product-card">
-                            <div class="product-thumb bg-cover" style="background-image: url('../assets/img/life-style/5.jpg');"></div>
+                            <div class="product-thumb bg-cover" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/life-style/5.jpg');"></div>
                             <div class="product-content">
                                 <a href="product-details.html">Men's Fila Fulcrum 3</a>
                                 <div class="d-flex">
@@ -198,7 +201,7 @@
                     </div>
                     <div class="col-sm-6 col-md-4 col-lg-3">
                         <div class="single-product-card">
-                            <div class="product-thumb bg-cover" style="background-image: url('../assets/img/life-style/6.jpg');"></div>
+                            <div class="product-thumb bg-cover" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/life-style/6.jpg');"></div>
                             <div class="product-content">
                                 <a href="product-details.html">Men's Fila Fulcrum 3</a>
                                 <div class="d-flex">
@@ -210,7 +213,7 @@
                     </div>
                     <div class="col-sm-6 col-md-4 col-lg-3">
                         <div class="single-product-card">
-                            <div class="product-thumb bg-cover" style="background-image: url('../assets/img/life-style/7.jpg');"></div>
+                            <div class="product-thumb bg-cover" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/life-style/7.jpg');"></div>
                             <div class="product-content">
                                 <a href="product-details.html">Men's Fila Fulcrum 3</a>
                                 <div class="d-flex">
@@ -222,7 +225,7 @@
                     </div>
                     <div class="col-sm-6 col-md-4 col-lg-3">
                         <div class="single-product-card">
-                            <div class="product-thumb bg-cover" style="background-image: url('../assets/img/life-style/8.jpg');"></div>
+                            <div class="product-thumb bg-cover" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/life-style/8.jpg');"></div>
                             <div class="product-content">
                                 <a href="product-details.html">Men's Fila Fulcrum 3</a>
                                 <div class="d-flex">
@@ -249,7 +252,7 @@
                         <p class="pe-sm-5 me-sm-5">For a party, you should be wearing shoes that are comfortable as well as matching your outfit.</p>
                     </div>
                     <div class="divider-img ms-4">
-                        <img src="../assets/img/core-arrow1.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/core-arrow1.png" alt="">
                     </div>
                     <div class="single-core-features ms-5">
                         <h2>Use Best Technology</h2>
@@ -258,7 +261,7 @@
                 </div>
                 <div class="col-lg-2 col-12 text-center">
                     <div class="core-feature-shoes">
-                        <img src="../assets/img/core-feature.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/core-feature.png" alt="">
                     </div>
                 </div>
                 <div class="col-lg-4 offset-lg-1">
@@ -267,7 +270,7 @@
                         <p class="pe-sm-3">For a party, you should be wearing shoes that are comfortable as well as matching your outfit.</p>
                     </div>
                     <div class="divider-img">
-                        <img src="../assets/img/core-arrow2.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/core-arrow2.png" alt="">
                     </div>
                     <div class="single-core-features">
                         <h2>High Quality Design</h2>
@@ -291,7 +294,7 @@
                 </div>
             </div>
         </div>
-        <div class="product-img-grid-bg bg-cover d-none d-lg-block" style="background-image: url('../assets/img/product-img-grid-bg.png')"></div>
+        <div class="product-img-grid-bg bg-cover d-none d-lg-block" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/product-img-grid-bg.png')"></div>
     </div>
 
     <div class="popluar-shoes-brand-wrapper padding-160">
@@ -300,19 +303,19 @@
 
             <div class="brand-list-grid mt-5 d-lg-flex justify-content-between align-items-center">
                 <div class="single-brand">
-                    <img src="../assets/img/adidas.png" alt="adidas">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/adidas.png" alt="adidas">
                 </div>
                 <div class="single-brand">
-                    <img src="../assets/img/nike.png" alt="nike">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/nike.png" alt="nike">
                 </div>
                 <div class="single-brand">
-                    <img src="../assets/img/reebok.png" alt="reebok">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/reebok.png" alt="reebok">
                 </div>
                 <div class="single-brand">
-                    <img src="../assets/img/puma.png" alt="puma">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/puma.png" alt="puma">
                 </div>
                 <div class="single-brand">
-                    <img src="../assets/img/fila.png" alt="fila">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fila.png" alt="fila">
                 </div>
             </div>
         </div>
