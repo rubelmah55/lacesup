@@ -18,15 +18,20 @@ header {
         @media (max-width: 767px) {
             position: relative;
         }
+
+        hr {
+            display: none !important;
+        }
     }
 
     &.header-wrapper {
         @media (min-width: 992px) {
             margin-bottom: 20px;
         }
-        
+
         hr {
             border-bottom: 1.2px solid #C4C4C6;
+
         }
 
         @media (max-width: 1100px) {

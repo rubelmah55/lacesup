@@ -2741,6 +2741,10 @@ header.sticky {
   }
 }
 
+header.sticky hr {
+  display: none !important;
+}
+
 @media (min-width: 992px) {
   header.header-wrapper {
     margin-bottom: 20px;
@@ -3334,34 +3338,50 @@ header.header-wrapper .main-menu ul > li > ul ul {
   padding: 10px 20px;
 }
 
-.hero-wrapper .single-slide {
-  padding-top: 80px;
-  padding-bottom: 90px;
+.hero-wrapper {
   position: relative;
 }
 
-.hero-wrapper .single-slide .rotate-big-text {
+.hero-wrapper .rotate-big-text {
   font-size: 144px;
   font-weight: 500;
   position: absolute;
-  right: 30px;
   top: 50%;
   -webkit-transform: translateY(-50%) rotate(-90deg);
           transform: translateY(-50%) rotate(-90deg);
   color: #E4E6E9;
+  left: auto;
+}
+
+@media (min-width: 1400px) {
+  .hero-wrapper .rotate-big-text {
+    right: -175px;
+  }
+}
+
+@media (min-width: 1900px) {
+  .hero-wrapper .rotate-big-text {
+    right: 30px;
+  }
 }
 
 @media (max-width: 991px) {
-  .hero-wrapper .single-slide .rotate-big-text {
+  .hero-wrapper .rotate-big-text {
     font-size: 90px;
   }
 }
 
 @media (max-width: 991px) {
-  .hero-wrapper .single-slide .rotate-big-text {
+  .hero-wrapper .rotate-big-text {
     right: -80px;
     font-size: 70px;
   }
+}
+
+.hero-wrapper .single-slide {
+  padding-top: 80px;
+  padding-bottom: 90px;
+  position: relative;
 }
 
 .hero-wrapper .single-slide .hero-content h1 {

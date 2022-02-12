@@ -1,28 +1,37 @@
-.hero-wrapper { 
+.hero-wrapper {
+    position: relative;
+
+    .rotate-big-text { 
+        font-size: 144px;
+        font-weight: 500;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) rotate(-90deg);
+        color: #E4E6E9;
+        left: auto;
+
+        @media (min-width: 1400px) {
+            right: -175px;
+        }
+
+        @media (min-width: 1900px) {
+            right: 30px;
+        }
+
+        @media (max-width: 991px) {
+            font-size: 90px;
+        }
+
+        @media (max-width: 991px) {
+            right: -80px;
+            font-size: 70px;
+        }
+    }
 
 	.single-slide { 
         padding-top: 80px;
         padding-bottom: 90px;
         position: relative;
-
-		.rotate-big-text { 
-            font-size: 144px;
-            font-weight: 500;
-            position: absolute;
-            right: 30px;
-            top: 50%;
-            transform: translateY(-50%) rotate(-90deg);
-            color: #E4E6E9;
-
-            @media (max-width: 991px) {
-                font-size: 90px;
-            }
-
-            @media (max-width: 991px) {
-                right: -80px;
-                font-size: 70px;
-            }
-		}
 
 		.hero-content { 
 
