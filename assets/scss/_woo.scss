@@ -1,13 +1,9 @@
 
 .brand-collection-carousel {
-    background-color: #FF7675;
-    padding-top: 90px;
-    padding-bottom: 65px;
 
     h1 {
         font-size: 46px;
         font-weight: 500;
-        color: #fff;
         margin-bottom: 30px;
     }
 
@@ -25,7 +21,7 @@
         }
 
         .single-brand-item {
-            background: #FFFFFF;
+            background: #F8F8F8;
             border-radius: 12px;
             padding-top: 35px;
             padding-left: 38px;
@@ -48,14 +44,18 @@
                     margin-top: 50px;
 
                     a { 
-                        color: $second-color;
+                        color: $theme-color;
                         font-size: 34px;
                         line-height: 46px;
-                        font-weight: 400;
+                        font-weight: 500;
 
                         span { 
                             color: $third-color;
                             display: block;
+                        }
+
+                        &:hover {
+                            color: $second-color;
                         }
                     }
                 }
@@ -73,7 +73,11 @@
 
     .collection-carosuel-nav {
         i {
-            margin-right: 15px;
+            margin-right: 25px;
+
+            &::before {
+                font-size: 16px;
+            }
         }
     }
 }

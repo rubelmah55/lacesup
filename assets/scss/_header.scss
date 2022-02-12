@@ -1,5 +1,8 @@
 header {
-    position: relative;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 0;
     z-index: 99;
 
     ul {
@@ -7,40 +10,45 @@ header {
         margin: 0;
     }
 
-    &.sticky {
-        top: 0 !important;
-        width: 100%;
-        position: fixed !important;      
-        background: #fff;
-        animation: sticky .8s ease-in-out;
-        box-shadow: 0 13px 35px -12px rgba(35,35,35,.15);
-     
-        @media (max-width: 767px) {
-            position: relative;
-        }
-
-        hr {
-            display: none !important;
-        }
-    }
-
-    &.header-wrapper {
-        @media (min-width: 992px) {
-            margin-bottom: 20px;
-        }
-
-        hr {
-            border-bottom: 1.2px solid #C4C4C6;
-
-        }
-
+    .main-header-wrapper {
         @media (max-width: 1100px) {
             padding: 15px 0px;
         }
         
+        &.sticky {
+            top: 0 !important;
+            width: 100%;
+            position: fixed !important;      
+            background: #FF7675;
+            animation: sticky .8s ease-in-out;
+            box-shadow: 0 13px 35px -12px rgba(35,35,35,.15);
+         
+            @media (max-width: 767px) {
+                position: relative;
+            }
+            
+            .main-menu {                         
+                ul {                   
+                    li {
+                        a {
+                            padding: 25px 17px;
+                        }
+                    }    
+                }
+            }
+        }
+    }
+
+    &.header-wrapper {
         .logo {
             a {
                 display: block;
+            }
+        }
+
+        a {
+            &:hover {
+                color: $third-color;
             }
         }
 
@@ -55,7 +63,7 @@ header {
                         display: inline-block;
                         font-weight: 400;
                         text-transform: capitalize;
-                        color: #606062;
+                        color: #fff;
                         line-height: 1;
                         padding: 38px 17px;
                         overflow: hidden;
@@ -75,7 +83,7 @@ header {
 
                     &:hover {
                         > a {
-                            color: $second-color;
+                            color: $third-color;
                         }
 
                         > ul {
@@ -85,7 +93,7 @@ header {
 
                              li:hover {
                                 a {
-                                    color: $theme-color;
+                                    color: $third-color;
                                 }
 
                                 ul {
@@ -136,10 +144,6 @@ header {
 
     }
 
-    &.header-style-2 {
-        
-    }
-
 }
 
 .header-right-element, .action-bar { 
@@ -160,18 +164,19 @@ header {
                 color: $third-color;
                 padding-left: 38px;
                 height: 100%;
-                border: 1px solid #BEC0C2 !important;
+                border: 1px solid #fff !important;
                 box-sizing: border-box;
                 border-radius: 4px;
                 font-size: 16px;
                 line-height: 1;
+                background: transparent;
 
                 @media (min-width: 767px) and (max-width: 1100px) {
                     width: 130px;
                 }
 
                 &::placeholder {
-                    color: #787A80;
+                    color: #fff;
                 }
             }
 
@@ -181,7 +186,7 @@ header {
                 font-size: 16px;
                 top: 50%;
                 transform: translateY(-50%);
-                color: #787A80;
+                color: #fff;
             }
         }
     }
@@ -189,7 +194,7 @@ header {
     .product-cart { 
 
         a { 
-            color: #4A4C54;
+            color: #fff;
             font-size: 22px;
         }
     }
@@ -202,7 +207,7 @@ header {
         }
 
         a { 
-            color: #4A4C54;
+            color: #fff;
             font-size: 22px;
         }
     }
@@ -239,7 +244,7 @@ header {
 
 .page-banner-wrap {
     background-color: $theme-color;
-    padding-top: 115px;
+    padding-top: 220px;
     padding-bottom: 135px;
     position: relative;
     z-index: 1;
@@ -247,17 +252,17 @@ header {
     background-size: cover;
 
     @media (max-width: 991px) {
-        padding-top: 110px;
+        padding-top: 210px;
         padding-bottom: 90px;
     }
 
     @media (max-width: 767px) {
-        padding-top: 100px;
+        padding-top: 200px;
         padding-bottom: 80px;
     }
 
     @media (max-width: 500px) {
-        padding-top: 80px;
+        padding-top: 180px;
         padding-bottom: 70px;
     }
 
@@ -281,16 +286,16 @@ header {
 }
 
 .shop-page-banner {
-    padding-top: 150px;
+    padding-top: 220px;
     padding-bottom: 135px;
 
     @media (max-width: 991px) {
-        padding-top: 100px;
+        padding-top: 200px;
         padding-bottom: 100px;
     }
 
     @media (max-width: 767px) {
-        padding-top: 80px;
+        padding-top: 180px;
         padding-bottom: 80px;
     }
 }
@@ -442,12 +447,17 @@ header {
 }
 
 #hamburger {
-    color: $theme-color;
+    color: $white;
     font-size: 30px;
     line-height: 1;
     text-align: right;
     display: none;
     margin-top: -3px;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        color: $third-color;
+    }
     
     i {
         cursor: pointer;
