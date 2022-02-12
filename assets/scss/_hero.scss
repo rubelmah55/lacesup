@@ -55,8 +55,11 @@
                 }
             }
 
-            p { 
-                padding-right: 150px;
+            p {
+
+                @media (min-width: 991px) {
+                    padding-right: 150px;
+                }
             }
 
             .theme-btn { 
@@ -169,12 +172,12 @@
 	}
 
 	.single-slide-2 { 
-        padding-top: 60px;
+        padding-top: 180px;
         padding-bottom: 120px;
         position: relative;
         z-index: 1;
         overflow: hidden;
-        background-color: #F2EFEF;
+        background-color: #FF7675;
 
         &::before {
             position: absolute;
@@ -216,6 +219,7 @@
             h1 { 
                 font-size: 64px;
                 line-height: 120%;
+                color: #fff;
 
                 @media (max-width: 991px) {
                     font-size: 50px;
@@ -227,7 +231,7 @@
             }
 
             p { 
-
+                color: #fff;
             }
 
             .theme-btn { 

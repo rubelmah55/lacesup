@@ -44,7 +44,7 @@
                                 <li><a href="women.html">women</a></li>
                                 <li><a href="kids.html">kids</a></li>
                                 <li><a href="brends.html">brends</a></li>
-                                <li><a href="shop.html">sale</a></li>
+                                <li><a href="top-sale-page.html">sale</a></li>
                             </ul>
                         </div>
                     </div>
@@ -80,7 +80,7 @@
                                     <li><a href="women.html">women</a></li>
                                     <li><a href="kids.html">kids</a></li>
                                     <li><a href="brends.html">brends</a></li>
-                                    <li><a href="shop.html">sale</a></li>
+                                    <li><a href="top-sale-page.html">sale</a></li>
                                 </ul>
                             </nav>
 

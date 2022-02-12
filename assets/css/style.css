@@ -3420,8 +3420,10 @@ header.header-wrapper .main-menu ul > li > ul ul {
   }
 }
 
-.hero-wrapper .single-slide .hero-content p {
-  padding-right: 150px;
+@media (min-width: 991px) {
+  .hero-wrapper .single-slide .hero-content p {
+    padding-right: 150px;
+  }
 }
 
 .hero-wrapper .single-slide .hero-content .theme-btn {
@@ -3525,12 +3527,12 @@ header.header-wrapper .main-menu ul > li > ul ul {
 }
 
 .hero-wrapper .single-slide-2 {
-  padding-top: 60px;
+  padding-top: 180px;
   padding-bottom: 120px;
   position: relative;
   z-index: 1;
   overflow: hidden;
-  background-color: #F2EFEF;
+  background-color: #FF7675;
 }
 
 .hero-wrapper .single-slide-2::before {
@@ -3579,6 +3581,7 @@ header.header-wrapper .main-menu ul > li > ul ul {
 .hero-wrapper .single-slide-2 .hero-content h1 {
   font-size: 64px;
   line-height: 120%;
+  color: #fff;
 }
 
 @media (max-width: 991px) {
@@ -3591,6 +3594,10 @@ header.header-wrapper .main-menu ul > li > ul ul {
   .hero-wrapper .single-slide-2 .hero-content h1 {
     font-size: 40px;
   }
+}
+
+.hero-wrapper .single-slide-2 .hero-content p {
+  color: #fff;
 }
 
 .hero-wrapper .single-slide-2 .hero-content .theme-btn {
