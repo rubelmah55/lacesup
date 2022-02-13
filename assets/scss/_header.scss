@@ -586,3 +586,59 @@ header {
     }
 
 }
+
+
+.promo-page-banner-wrapper {
+    padding-top: 230px;
+    padding-bottom: 100px;
+    background-color: $theme-color;
+    position: relative;
+    z-index: 1;
+
+    @media (max-width: 991px) {
+        padding-top: 170px;
+        padding-bottom: 80px;
+    }
+
+    .promo-page-heading { 
+
+        h1 { 
+            color: #fff;
+
+            @media (max-width: 991px) {
+               font-size: 32px;
+            }
+        
+        }
+
+        a { 
+            background-color: #2A324A;
+            color: #fff;
+            border-radius: 7px;
+            border-color: #2A324A;
+
+            @media (max-width: 991px) {
+                margin-top: 30px !important;
+            }
+
+            &:hover {
+                background-color: $second-color !important;
+                border-color: $second-color !important;
+                color: #fff;
+            }
+        }
+    }
+
+    .nice-arrow { 
+        position: absolute;
+        right: 10%;
+        top: 40%;
+        z-index: -1;
+    }
+    
+}
+
+.promo-code-bar {
+    padding: 25px 0px;
+    background-color: #EE4F4F;
+}

@@ -3348,6 +3348,62 @@ header.header-wrapper .main-menu ul > li > ul ul {
   padding: 10px 20px;
 }
 
+.promo-page-banner-wrapper {
+  padding-top: 230px;
+  padding-bottom: 100px;
+  background-color: #8097D1;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 991px) {
+  .promo-page-banner-wrapper {
+    padding-top: 170px;
+    padding-bottom: 80px;
+  }
+}
+
+.promo-page-banner-wrapper .promo-page-heading h1 {
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  .promo-page-banner-wrapper .promo-page-heading h1 {
+    font-size: 32px;
+  }
+}
+
+.promo-page-banner-wrapper .promo-page-heading a {
+  background-color: #2A324A;
+  color: #fff;
+  border-radius: 7px;
+  border-color: #2A324A;
+}
+
+@media (max-width: 991px) {
+  .promo-page-banner-wrapper .promo-page-heading a {
+    margin-top: 30px !important;
+  }
+}
+
+.promo-page-banner-wrapper .promo-page-heading a:hover {
+  background-color: #EE4F4F !important;
+  border-color: #EE4F4F !important;
+  color: #fff;
+}
+
+.promo-page-banner-wrapper .nice-arrow {
+  position: absolute;
+  right: 10%;
+  top: 40%;
+  z-index: -1;
+}
+
+.promo-code-bar {
+  padding: 25px 0px;
+  background-color: #EE4F4F;
+}
+
 .hero-wrapper {
   position: relative;
 }
@@ -3463,7 +3519,11 @@ header.header-wrapper .main-menu ul > li > ul ul {
 }
 
 .hero-wrapper .single-slide .products-info-funfact .product-rating p {
-  color: #8093D0 !important;
+  color: #606062 !important;
+}
+
+.hero-wrapper .single-slide .products-info-funfact .product-rating h3, .hero-wrapper .single-slide .products-info-funfact .product-rating h4, .hero-wrapper .single-slide .products-info-funfact .product-rating h5, .hero-wrapper .single-slide .products-info-funfact .product-rating h2 {
+  color: #606062;
 }
 
 .hero-wrapper .single-slide .products-info-funfact .product-rating .review-star {
@@ -3817,6 +3877,17 @@ header.header-wrapper .main-menu ul > li > ul ul {
   margin-right: -25px;
 }
 
+@media (max-width: 991px) {
+  .lr-25 {
+    margin-left: -12.5px;
+    margin-right: -12.5px;
+  }
+  .lr-25 [class*="col"] {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
 .lr-25 [class*="col"] {
   padding-left: 25px;
   padding-right: 25px;
@@ -3825,6 +3896,17 @@ header.header-wrapper .main-menu ul > li > ul ul {
 .lr-20 {
   margin-left: -20px;
   margin-right: -20px;
+}
+
+@media (max-width: 991px) {
+  .lr-20 {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  .lr-20 [class*="col"] {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .lr-20 [class*="col"] {
@@ -3842,6 +3924,10 @@ header.header-wrapper .main-menu ul > li > ul ul {
   .nice-draw {
     display: none;
   }
+}
+
+section {
+  overflow: hidden;
 }
 
 .social-join-card-wrapper {
@@ -4321,6 +4407,71 @@ header.header-wrapper .main-menu ul > li > ul ul {
 
 .single-promo-product-card .product-content .promo-code span {
   text-transform: uppercase;
+}
+
+.single-promo-card-item {
+  border-radius: 7px;
+  padding: 20px 20px 30px;
+  position: relative;
+  z-index: 1;
+  margin-top: 50px;
+}
+
+.single-promo-card-item::before {
+  position: absolute;
+  width: 82px;
+  height: 82px;
+  top: 16px;
+  right: 10px;
+  border-radius: 50%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(135, 155, 217, 0.21)), to(rgba(137, 211, 235, 0.126)));
+  background: linear-gradient(180deg, rgba(135, 155, 217, 0.21) 0%, rgba(137, 211, 235, 0.126) 100%);
+  -webkit-filter: blur(28px);
+          filter: blur(28px);
+  content: "";
+}
+
+.single-promo-card-item::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  background: rgba(255, 255, 255, 0.22);
+  opacity: .22;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  -webkit-box-shadow: 28px 28px 80px rgba(96, 96, 98, 0.24);
+          box-shadow: 28px 28px 80px rgba(96, 96, 98, 0.24);
+}
+
+.single-promo-card-item .icon {
+  margin-bottom: 15px;
+}
+
+.single-promo-card-item .content h3 {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.single-promo-card-item .content p {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.single-promo-card-item .content .theme-btn {
+  margin-top: 20px;
+  background: #2A324A;
+  border-radius: 7px;
+  color: #fff;
+  border-color: #2A324A;
+  padding: 12px 40px;
+}
+
+.single-promo-card-item .content .theme-btn:hover {
+  background: #8097D1;
+  border-color: #8097D1;
+  color: #fff;
 }
 
 .faq-wrapper {
