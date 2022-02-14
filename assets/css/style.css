@@ -3043,6 +3043,7 @@ header.header-wrapper .main-menu ul > li > ul ul {
 .breadcrumb-wrapper {
   padding: 20px 0px;
   color: #232833;
+  padding-top: 200px;
 }
 
 .breadcrumb-wrapper a:hover {
@@ -4738,6 +4739,14 @@ footer .footer-widgets-wrapper {
   footer .footer-widgets-wrapper {
     padding-bottom: 80px;
   }
+}
+
+footer .site-about-wid a {
+  color: #666666;
+}
+
+footer .site-about-wid a:hover {
+  color: #EE4F4F;
 }
 
 footer .site-about-wid .mobile-number {
