@@ -16,36 +16,48 @@
 </head>
 
 <body class="body-wrapper">
+    <?php 
+        $header = get_field('header', 'options');
+        $top_bar = $header['top_bar_message'];
+        $logo = $header['logo'];
 
+        if(!empty($top_bar)):
+     ?>
     <div class="promo-top-bar-wrapper">
         <div class="container text-center text-white">
             <div class="promo-heading">
-                <span>FREE SHIPPING ON ORDERS OVER $50 SEE DETAILS</span>
+                <span><?php echo $top_bar; ?></span>
             </div>
         </div>
     </div>
-
+    <?php endif; ?>
     <header class="header-wrapper">
         <div class="container">
             <div class="row align-items-center justify-content-between">
                 <div class="col-lg-2 col-sm-5 col-md-4 col-6 pr-lg-5">
                     <div class="logo">
-                        <a href="index.html">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png"  alt="Lacesup">       
-                        </a>
+                        <?php 
+                            if(!empty($logo)){
+                                printf('<a href="%s"><img src="%s"  alt="Lacesup"></a>', site_url(), $logo);
+                            }
+                         ?>
                     </div>
                 </div>
                 <div class="col-lg-10 text-end d-none d-lg-flex justify-content-between align-items-center">
                     <div class="menu-wrap">
                         <div class="main-menu">
-                            <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="man.html">man</a></li>
-                                <li><a href="women.html">women</a></li>
-                                <li><a href="kids.html">kids</a></li>
-                                <li><a href="brends.html">brends</a></li>
-                                <li><a href="shop.html">sale</a></li>
-                            </ul>
+                            <?php   
+                                wp_nav_menu( array(
+                                    'menu'               => 'Primary Menu',
+                                    'theme_location'     => 'menu-1',
+                                    'depth'              => 2,
+                                    'menu_id'            => '',
+                                    'container'          => false,
+                                    'menu_class'         => '',
+                                    'fallback_cb'        => 'wp_bootstrap_navwalker::fallback',
+                                    'walker'             => new wp_bootstrap_navwalker(),
+                                ));
+                            ?>
                         </div>
                     </div>
 

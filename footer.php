@@ -1,3 +1,7 @@
+    <?php 
+        $footer = get_field('footer', 'options');
+        $logo = $footer['logo'];
+     ?>
     <footer class="footer-wrapper">
         <div class="footer-widgets-wrapper">
             <div class="container">
@@ -5,55 +9,91 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="single-footer-widgets site-about-wid">
                             <div class="logo">
-                                <a href="index.html">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="logo">
-                                </a>
+                                <?php 
+                                    if(!empty($logo)){
+                                        printf('<a href="%s"><img src="%s" alt="logo"></a>', site_url(), $logo);
+                                    }
+                                 ?>
+                                
                             </div>
-                            <span class="mobile-number">+44 456 664 453</span>
+                            <?php 
+                                $contact = $footer['contact_info'];
+
+                                if(!empty($contact['phone'])){
+                                    printf('<span class="mobile-number"><a href="tel:%s">%s</a></span>', $contact['phone'], $contact['phone']);
+                                }
+                             ?>
+                             <?php 
+                                if(!empty($contact['email'])):
+                              ?>
                             <div class="single-contact-info">
                                 <div class="icon">
                                     <i class="icon-mail"></i>
                                 </div>
                                 <div class="content">
-                                    info@lacesup.com
+                                    <?php 
+                                    printf('<a href="mailto:%s">%s</a>', $contact['email'], $contact['email']);
+                                    ?>
                                 </div>
                             </div>
+                            <?php 
+                                endif;
+                                if(!empty($contact['address'])):
+                             ?>
                             <div class="single-contact-info">
                                 <div class="icon">
                                     <i class="icon-map-marker"></i>
                                 </div>
                                 <div class="content">
-                                    25/B Globe House Ave. Point <br> Beach, London
+                                    <?php echo $contact['address']; ?>
                                 </div>
                             </div>
+                            <?php endif; ?>
                         </div>
                     </div>
+                    <?php 
+                        $menus = $footer['footer_menus'];
+                        foreach ($menus as $key => $menu):
+                            if($key == 0){
+                     ?>
                     <div class="col-lg-2 offset-lg-1 col-sm-6">
                         <div class="single-footer-widgets">
                             <div class="wid-title">
-                                <p>Customer Service</p>
+                                <?php 
+                                    if(!empty($menu['menu_title'])){
+                                        printf('<p>%s</p>', $menu['menu_title']);
+                                    }
+                                 ?>
                             </div>
                             <ul>
-                                <li><a href="#">Contact Us</a></li>
-                                <li><a href="#">Returns</a></li>
-                                <li><a href="#">FAQ</a></li>
-                                <li><a href="#">Check Order</a></li>
+                                <?php 
+                                    foreach ($menu['menus'] as $mi) {
+                                        printf('<li><a href="%s">%s</a></li>',$mi['link'], $mi['name']);
+                                    }
+                                 ?>
                             </ul>
                         </div>
                     </div>
+                    <?php }elseif($key == 1){ ?>
                     <div class="col-lg-2 ps-lg-0 offset-lg-1 col-sm-6">
                         <div class="single-footer-widgets">
                             <div class="wid-title">
-                                <p>About Us</p>
+                                <?php 
+                                    if(!empty($menu['menu_title'])){
+                                        printf('<p>%s</p>', $menu['menu_title']);
+                                    }
+                                 ?>
                             </div>
                             <ul>
-                                <li><a href="#">Who We Are</a></li>
-                                <li><a href="#">Reviews</a></li>
-                                <li><a href="#">Coupons</a></li>
-                                <li><a href="#">Exclusion</a></li>
+                                <?php 
+                                    foreach ($menu['menus'] as $mi) {
+                                        printf('<li><a href="%s">%s</a></li>',$mi['link'], $mi['name']);
+                                    }
+                                 ?>
                             </ul>
                         </div>
                     </div>
+                    <?php }endforeach; ?>
                     <div class="col-lg-3 text-lg-end col-sm-6">
                         <div class="single-footer-widgets text-start">
                             <div class="newsletter-form">
@@ -66,11 +106,15 @@
                             
                             <div class="social-links">
                                 <p>More Informations</p>
+
                                 <div class="social-icon">
-                                    <a href="#" ><i class="icon-facebook"></i></a>
-                                    <a href="#" ><i class="icon-twitter"></i></a>
-                                    <a href="#" ><i class="icon-instagram"></i></a>
-                                    <a href="#" ><i class="icon-linkedin"></i></a>
+                                    <?php 
+                                        $socials = $footer['social_share'];
+
+                                        foreach ($socials as $social) {
+                                             printf('<a href="%s" >%s</a>', $social['url'], $social['icon']);
+                                         } 
+                                    ?>
                                 </div>
                             </div>
                         </div>
@@ -85,14 +129,23 @@
                 <div class="row text-center text-lg-start">
                     <div class="col-lg-6 col-12">
                         <div class="site-copyright">
-                            <p>Copyright ©2022 Lacesup. All Rights Reserved Copyright</p>
+                            <?php 
+                                $copyright = $footer['copy_right'];
+
+                                if(!empty($copyright)){
+                                    printf('<p>%s</p>', $copyright);
+                                }
+                             ?>
                         </div>
                     </div>
                     <div class="col-lg-6 col-12 mt-4 mt-lg-0 text-lg-end">
                         <div class="footer-menu">
                             <ul>
-                                <li><a href="#">Privacy policy</a></li>
-                                <li><a href="#">Trams & Service</a></li>
+                                <?php 
+                                    foreach($footer['bottom_bar_menu'] as $bottom_menu){
+                                        printf('<li><a href="%s" target="%s">%s</a></li>', $bottom_menu['link']['url'], $bottom_menu['link']['target'], $bottom_menu['link']['title']);
+                                    }
+                                 ?>
                             </ul>
                         </div>
                     </div>
