@@ -66,10 +66,10 @@
 
             if ($("body").scrollTop() > 100 || $("html").scrollTop() > 100) {
                 if (Width > 767) {
-                    $("header").addClass("sticky");
+                    $(".main-header-wrapper").addClass("sticky");
                 }
             } else {
-                $("header").removeClass("sticky");
+                $(".main-header-wrapper").removeClass("sticky");
             }
         });
 
