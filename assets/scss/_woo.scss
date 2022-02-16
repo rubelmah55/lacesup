@@ -400,7 +400,7 @@
     
                 &.slick-active {
                     button {
-                        border-color: #8093D0;
+                        border: 1px solid #8093D0;
                         background-color: #8093D0;
                     }
                 }
@@ -440,6 +440,11 @@
 
         h2 {
             font-weight: 28px;
+            margin-top: 20px;
+
+            span {
+                text-decoration: underline;
+            }
         }
     
         p { 
@@ -447,9 +452,31 @@
         }
     
         ul { 
-    
+            overflow: hidden;
+
             li { 
-    
+                position: relative;
+                padding-left: 25px;
+                margin-top: 10px;
+                width: 50%;
+                float: left;
+                font-size: 16px;
+
+                @media (max-width: 767px) {
+                    width: 100%;
+                    float: inherit;
+                }
+
+                &::before {
+                    position: absolute;
+                    left: 0;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 30px;
+                    background: #666;
+                    content: "";
+                    top: 10px;
+                }
             }
         }
     }

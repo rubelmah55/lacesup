@@ -2748,6 +2748,7 @@ header .main-header-wrapper.sticky {
           animation: sticky .8s ease-in-out;
   -webkit-box-shadow: 0 13px 35px -12px rgba(35, 35, 35, 0.15);
           box-shadow: 0 13px 35px -12px rgba(35, 35, 35, 0.15);
+  padding: 5px 0px;
 }
 
 @media (max-width: 767px) {
@@ -4501,7 +4502,7 @@ section {
 }
 
 .single-product-contents .product-img-gallery .slick-dots li.slick-active button {
-  border-color: #8093D0;
+  border: 1px solid #8093D0;
   background-color: #8093D0;
 }
 
@@ -4537,6 +4538,42 @@ section {
 
 .single-product-contents .product-content h2 {
   font-weight: 28px;
+  margin-top: 20px;
+}
+
+.single-product-contents .product-content h2 span {
+  text-decoration: underline;
+}
+
+.single-product-contents .product-content ul {
+  overflow: hidden;
+}
+
+.single-product-contents .product-content ul li {
+  position: relative;
+  padding-left: 25px;
+  margin-top: 10px;
+  width: 50%;
+  float: left;
+  font-size: 16px;
+}
+
+@media (max-width: 767px) {
+  .single-product-contents .product-content ul li {
+    width: 100%;
+    float: inherit;
+  }
+}
+
+.single-product-contents .product-content ul li::before {
+  position: absolute;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 30px;
+  background: #666;
+  content: "";
+  top: 10px;
 }
 
 .product-backlink-wrapper nav .breadcrumb .breadcrumb-item {
