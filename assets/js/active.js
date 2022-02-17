@@ -44,7 +44,19 @@
                 ],
 
             });
-        }       
+        }
+
+        
+        if($('.product-img-gallery').length > 0) {
+            $('.product-img-gallery').slick({
+                slidesToShow: 1, 
+                slidesToScroll: 1, 
+                arrows: false,
+                dots: true,
+                speed: 1100,
+                autoplay: true,
+            });
+        }
 
         /*==========================
            Scroll To Up Init
