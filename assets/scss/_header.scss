@@ -5,6 +5,125 @@ header {
     top: 0;
     z-index: 99;
 
+    &.style-2 {
+        position: relative;
+        background-color: #fff;
+
+        #hamburger { 
+            color: #202022;
+        }
+
+        .main-header-wrapper {
+
+            &.sticky {
+                background-color: #fff;
+
+                hr {
+                    display: none !important;
+                }
+            }
+
+            .main-menu {                         
+                ul {                  
+                    > li {
+    
+                        > a {
+                            color: #606062;
+                        }
+    
+                        &:hover {
+                            > a {
+                                color: $second-color !important;
+                            }
+    
+                            > ul {
+                                opacity: 1;
+                                visibility: visible;
+                                transform: translateY(0);
+    
+                                 li:hover {
+                                    a {
+                                        color: $second-color !important;
+                                    }
+    
+                                    ul {
+                                        a:hover {
+                                            color: $second-color !important;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .header-right-element, .action-bar { 
+
+            .search-box {
+        
+                form { 
+        
+                    input { 
+                        border: 1px solid #606062 !important;
+                        color: #606062;
+
+                        &::placeholder {
+                            color: #606062;
+                        }
+                    }
+        
+                    .icon-search { 
+                        color: #606062;
+                        cursor: pointer;
+
+                        &:hover {
+                            color: $second-color !important;
+                        }
+                    }
+                }
+            }
+        
+            .product-cart, .user-login { 
+        
+                a { 
+                    color: #606062;
+
+                    &:hover {
+                        color: $second-color !important;
+                    }
+                }
+            }
+        }
+        
+        .mobile-nav {
+            .search-box {
+        
+                form { 
+        
+                    input { 
+                        border: 1px solid #fff !important;
+                        color: #fff;
+
+                        &::placeholder {
+                            color: #fff;
+                        }
+                    }
+        
+                    .icon-search { 
+                        color: #fff;
+                        cursor: pointer;
+
+                        &:hover {
+                            color: $second-color !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     ul {
         padding: 0;
         margin: 0;
@@ -54,96 +173,96 @@ header {
             }
         }
 
-        .main-menu {                         
-            ul {
-                line-height: 1;                    
-                > li {
+    }
+
+    .main-menu {                         
+        ul {
+            line-height: 1;                    
+            > li {
+                display: inline-block;
+                line-height: 1;
+
+                > a {
                     display: inline-block;
+                    font-weight: 400;
+                    text-transform: capitalize;
+                    color: #fff;
                     line-height: 1;
+                    padding: 38px 17px;
+                    overflow: hidden;
+                    text-align: left;
+                    position: relative;
+                    font-size: 18px;
 
-                    > a {
-                        display: inline-block;
-                        font-weight: 400;
-                        text-transform: capitalize;
-                        color: #fff;
-                        line-height: 1;
-                        padding: 38px 17px;
-                        overflow: hidden;
-                        text-align: left;
-                        position: relative;
-                        font-size: 18px;
-
-                        span {
-                            margin-left: 3px;
-                            font-size: 14px;
-                        }
-
-                        @media (max-width: 1199px) {
-                            padding: 26px 20px;  
-                        }
+                    span {
+                        margin-left: 3px;
+                        font-size: 14px;
                     }
 
-                    &:hover {
-                        > a {
-                            color: $third-color;
-                        }
+                    @media (max-width: 1199px) {
+                        padding: 26px 20px;  
+                    }
+                }
 
-                        > ul {
-                            opacity: 1;
-                            visibility: visible;
-                            transform: translateY(0);
-
-                             li:hover {
-                                a {
-                                    color: $third-color;
-                                }
-
-                                ul {
-                                    a:hover {
-                                        color: #fff;
-                                    }
-                                }
-                            }
-                        }
+                &:hover {
+                    > a {
+                        color: $third-color;
                     }
 
                     > ul {
-                        position: absolute;
-                        top: 100%;
-                        width: 230px;
-                        background-color: $second-color;
-                        left: 0;
-                        z-index: 999;
-                        box-shadow: 0 13px 35px -12px rgba(35, 35, 35, 0.15);
-                        visibility: hidden;
-                        opacity: 0;
-                        transform: translateY(40px);
-                        transition: all .5s ease-in-out;
-                        padding: 10px 0px;
-                        
-                        li {
-                            display: block;
-                            a { 
-                                display: block;                              
-                                color: $white;
-                                padding: 10px 24px;
-                                line-height: 1.5;
-                                
-                                &:hover { 
-                                    color: $theme-color;
+                        opacity: 1;
+                        visibility: visible;
+                        transform: translateY(0);
+
+                         li:hover {
+                            a {
+                                color: $third-color;
+                            }
+
+                            ul {
+                                a:hover {
+                                    color: #fff;
                                 }
                             }
                         }
+                    }
+                }
 
-                        ul {
-                            left: 100%;
-                            top: 0;
+                > ul {
+                    position: absolute;
+                    top: 100%;
+                    width: 230px;
+                    background-color: $second-color;
+                    left: 0;
+                    z-index: 999;
+                    box-shadow: 0 13px 35px -12px rgba(35, 35, 35, 0.15);
+                    visibility: hidden;
+                    opacity: 0;
+                    transform: translateY(40px);
+                    transition: all .5s ease-in-out;
+                    padding: 10px 0px;
+                    
+                    li {
+                        display: block;
+                        a { 
+                            display: block;                              
+                            color: $white;
+                            padding: 10px 24px;
+                            line-height: 1.5;
+                            
+                            &:hover { 
+                                color: $theme-color;
+                            }
                         }
+                    }
+
+                    ul {
+                        left: 100%;
+                        top: 0;
                     }
                 }
             }
         }
-
     }
 
 }
@@ -253,6 +372,18 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
 
+    &.style-2 {
+        padding-top: 135px;
+
+        @media (max-width: 991px) {
+            padding-top: 100px;
+        }
+    
+        @media (max-width: 767px) {
+            padding-top: 80px;
+        }
+    }
+
     @media (max-width: 991px) {
         padding-top: 210px;
         padding-bottom: 90px;
@@ -299,6 +430,18 @@ header {
     @media (max-width: 767px) {
         padding-top: 180px;
         padding-bottom: 80px;
+    }
+
+    &.style-2 {
+        padding-top: 135px;
+
+        @media (max-width: 991px) {
+            padding-top: 100px;
+        }
+    
+        @media (max-width: 767px) {
+            padding-top: 80px;
+        }
     }
 }
 

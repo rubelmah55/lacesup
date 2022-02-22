@@ -2728,6 +2728,114 @@ header {
   z-index: 99;
 }
 
+header.style-2 {
+  position: relative;
+  background-color: #fff;
+}
+
+header.style-2 #hamburger {
+  color: #202022;
+}
+
+header.style-2 .main-header-wrapper.sticky {
+  background-color: #fff;
+}
+
+header.style-2 .main-header-wrapper.sticky hr {
+  display: none !important;
+}
+
+header.style-2 .main-header-wrapper .main-menu ul > li > a {
+  color: #606062;
+}
+
+header.style-2 .main-header-wrapper .main-menu ul > li:hover > a {
+  color: #EE4F4F !important;
+}
+
+header.style-2 .main-header-wrapper .main-menu ul > li:hover > ul {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+header.style-2 .main-header-wrapper .main-menu ul > li:hover > ul li:hover a {
+  color: #EE4F4F !important;
+}
+
+header.style-2 .main-header-wrapper .main-menu ul > li:hover > ul li:hover ul a:hover {
+  color: #EE4F4F !important;
+}
+
+header.style-2 .header-right-element .search-box form input, header.style-2 .action-bar .search-box form input {
+  border: 1px solid #606062 !important;
+  color: #606062;
+}
+
+header.style-2 .header-right-element .search-box form input::-webkit-input-placeholder, header.style-2 .action-bar .search-box form input::-webkit-input-placeholder {
+  color: #606062;
+}
+
+header.style-2 .header-right-element .search-box form input:-ms-input-placeholder, header.style-2 .action-bar .search-box form input:-ms-input-placeholder {
+  color: #606062;
+}
+
+header.style-2 .header-right-element .search-box form input::-ms-input-placeholder, header.style-2 .action-bar .search-box form input::-ms-input-placeholder {
+  color: #606062;
+}
+
+header.style-2 .header-right-element .search-box form input::placeholder, header.style-2 .action-bar .search-box form input::placeholder {
+  color: #606062;
+}
+
+header.style-2 .header-right-element .search-box form .icon-search, header.style-2 .action-bar .search-box form .icon-search {
+  color: #606062;
+  cursor: pointer;
+}
+
+header.style-2 .header-right-element .search-box form .icon-search:hover, header.style-2 .action-bar .search-box form .icon-search:hover {
+  color: #EE4F4F !important;
+}
+
+header.style-2 .header-right-element .product-cart a, header.style-2 .header-right-element .user-login a, header.style-2 .action-bar .product-cart a, header.style-2 .action-bar .user-login a {
+  color: #606062;
+}
+
+header.style-2 .header-right-element .product-cart a:hover, header.style-2 .header-right-element .user-login a:hover, header.style-2 .action-bar .product-cart a:hover, header.style-2 .action-bar .user-login a:hover {
+  color: #EE4F4F !important;
+}
+
+header.style-2 .mobile-nav .search-box form input {
+  border: 1px solid #fff !important;
+  color: #fff;
+}
+
+header.style-2 .mobile-nav .search-box form input::-webkit-input-placeholder {
+  color: #fff;
+}
+
+header.style-2 .mobile-nav .search-box form input:-ms-input-placeholder {
+  color: #fff;
+}
+
+header.style-2 .mobile-nav .search-box form input::-ms-input-placeholder {
+  color: #fff;
+}
+
+header.style-2 .mobile-nav .search-box form input::placeholder {
+  color: #fff;
+}
+
+header.style-2 .mobile-nav .search-box form .icon-search {
+  color: #fff;
+  cursor: pointer;
+}
+
+header.style-2 .mobile-nav .search-box form .icon-search:hover {
+  color: #EE4F4F !important;
+}
+
 header ul {
   padding: 0;
   margin: 0;
@@ -2769,16 +2877,16 @@ header.header-wrapper a:hover {
   color: #232833;
 }
 
-header.header-wrapper .main-menu ul {
+header .main-menu ul {
   line-height: 1;
 }
 
-header.header-wrapper .main-menu ul > li {
+header .main-menu ul > li {
   display: inline-block;
   line-height: 1;
 }
 
-header.header-wrapper .main-menu ul > li > a {
+header .main-menu ul > li > a {
   display: inline-block;
   font-weight: 400;
   text-transform: capitalize;
@@ -2791,37 +2899,37 @@ header.header-wrapper .main-menu ul > li > a {
   font-size: 18px;
 }
 
-header.header-wrapper .main-menu ul > li > a span {
+header .main-menu ul > li > a span {
   margin-left: 3px;
   font-size: 14px;
 }
 
 @media (max-width: 1199px) {
-  header.header-wrapper .main-menu ul > li > a {
+  header .main-menu ul > li > a {
     padding: 26px 20px;
   }
 }
 
-header.header-wrapper .main-menu ul > li:hover > a {
+header .main-menu ul > li:hover > a {
   color: #232833;
 }
 
-header.header-wrapper .main-menu ul > li:hover > ul {
+header .main-menu ul > li:hover > ul {
   opacity: 1;
   visibility: visible;
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
 
-header.header-wrapper .main-menu ul > li:hover > ul li:hover a {
+header .main-menu ul > li:hover > ul li:hover a {
   color: #232833;
 }
 
-header.header-wrapper .main-menu ul > li:hover > ul li:hover ul a:hover {
+header .main-menu ul > li:hover > ul li:hover ul a:hover {
   color: #fff;
 }
 
-header.header-wrapper .main-menu ul > li > ul {
+header .main-menu ul > li > ul {
   position: absolute;
   top: 100%;
   width: 230px;
@@ -2839,22 +2947,22 @@ header.header-wrapper .main-menu ul > li > ul {
   padding: 10px 0px;
 }
 
-header.header-wrapper .main-menu ul > li > ul li {
+header .main-menu ul > li > ul li {
   display: block;
 }
 
-header.header-wrapper .main-menu ul > li > ul li a {
+header .main-menu ul > li > ul li a {
   display: block;
   color: #FFF;
   padding: 10px 24px;
   line-height: 1.5;
 }
 
-header.header-wrapper .main-menu ul > li > ul li a:hover {
+header .main-menu ul > li > ul li a:hover {
   color: #8097D1;
 }
 
-header.header-wrapper .main-menu ul > li > ul ul {
+header .main-menu ul > li > ul ul {
   left: 100%;
   top: 0;
 }
@@ -2984,6 +3092,22 @@ header.header-wrapper .main-menu ul > li > ul ul {
   background-size: cover;
 }
 
+.page-banner-wrap.style-2 {
+  padding-top: 135px;
+}
+
+@media (max-width: 991px) {
+  .page-banner-wrap.style-2 {
+    padding-top: 100px;
+  }
+}
+
+@media (max-width: 767px) {
+  .page-banner-wrap.style-2 {
+    padding-top: 80px;
+  }
+}
+
 @media (max-width: 991px) {
   .page-banner-wrap {
     padding-top: 210px;
@@ -3038,6 +3162,22 @@ header.header-wrapper .main-menu ul > li > ul ul {
   .shop-page-banner {
     padding-top: 180px;
     padding-bottom: 80px;
+  }
+}
+
+.shop-page-banner.style-2 {
+  padding-top: 135px;
+}
+
+@media (max-width: 991px) {
+  .shop-page-banner.style-2 {
+    padding-top: 100px;
+  }
+}
+
+@media (max-width: 767px) {
+  .shop-page-banner.style-2 {
+    padding-top: 80px;
   }
 }
 
