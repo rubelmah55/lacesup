@@ -183,3 +183,7 @@ button.reset {
 .product_load_more {
     margin-top: 40px;
 }
+
+.breadcrumb img{
+    margin-left: 10px;
+}

@@ -172,16 +172,17 @@ function load_more_product_func() {
 
 /*** Breadcrumb */
 function lacesup_breadcrumb() {
-	$delimiter = '<span class="angle-right">/</span>';
+	$themeurl = get_template_directory_uri();
+	$delimiter = '<img src="'.$themeurl.'/assets/img/arrow-right.svg">';
 	$home = 'Home'; 
-	$before = '<span class="current-page">'; 
-	$after = '</span>'; 
+	$before = '<li class="breadcrumb-item active" aria-current="page">'; 
+	$after = '</li>'; 
 
 	$events = get_post_type_object('tribe_events');
    
 	if ( !is_front_page() ) {
    
-	echo '<nav class="breadcrumb">';
+	echo '<nav><ol class="breadcrumb">';
    
 	global $post;
 	$homeLink = get_bloginfo('url');
@@ -311,7 +312,7 @@ function lacesup_breadcrumb() {
 		  echo ': ' . __('Page') . ' ' . get_query_var('paged');
 		if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ')';
 	}
-	echo '</nav>';
+	echo '</ol></nav>';
 	} 
 }
 
