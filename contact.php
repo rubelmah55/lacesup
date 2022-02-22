@@ -29,11 +29,18 @@ Template Name: Contact
     <section class="contact-us-wrapper fix padding-160">
         <div class="container">
             <div class="contact-us-content">
-                <p class="mb-30">Our Customer Care team is committed to answering all of your questions as quickly as possible, and we look forward to helping resolve your issue. We updated shoes.com. With the update, you may have some questions about using your account and previous access purchases. Please check our Frequently Asked Questions section to find answers to some common questions.</p>
-
-                <h3>CONTACT US :</h3>
-                <p>Phone: 1 (888) 200-8414, Monday – Friday, 9am – 5pm EST</p>
-
+                <?php 
+                    $contact = get_field('contact_us');
+                    if(!empty($contact['top_content'])){
+                        printf('<p class="mb-30">%s</p>',$contact['top_content']);
+                    }
+                    if(!empty($contact['title'])){
+                        printf('<h3>%s</h3>',$contact['title']);
+                    }
+                    if(!empty($contact['phone_and_time'])){
+                        printf('<p>%s</p>',$contact['phone_and_time']);
+                    }
+                 ?>
                 <div class="contact-form ms-md-5">                                                        
                     <form action="mail.php" class="row" id="contact-form">
                         <div class="col-md-6 col-12">
@@ -90,11 +97,22 @@ Template Name: Contact
                 </div>
 
                 <div class="contact-us-bottom-content ms-md-5">
-                    <h2 class="mb-30">Lacesup.Com Benefits & Guarantees</h2>
-                    <h3 class="mb-20">Free Shipping</h3>
-                    <p class="mb-40">UPS economy shipping options are free on orders over $50 to Shoes.com customers anywhere in the United States. All orders over $50 qualify for free shipping. For orders under $50, UPS economy shipping will be a flat rate of $9.99. Allow 3-10 business days for receipt within the United States when you order with free UPS economy shipping on orders over $50.</p>
-                    <h3 class="mb-20">100% Price Guarantee</h3>
-                    <p>If you find a product for a lower price on another website, we will refund you 100% of the difference between the lower price and the Shoes.com price. We'll even refund the difference if we lower the price at Lacesup.com!</p>
+                    <?php 
+                        if(!empty($contact['bottom_title'])){
+                            printf('<h2 class="mb-30">%s</h2>', $contact['bottom_title']);
+                        } 
+
+                        if(!empty($contact['items'])){
+                            foreach ($contact['items'] as $i => $item) {
+                                printf('<h3 class="mb-20">%s</h3>', $item['title']);
+                                $m = "";
+                                if($i == 0){
+                                    $m = "mb-40";
+                                }
+                                printf('<p class="%s">%s</p>', $m, $item['content']);
+                            }
+                        }
+                     ?>
                 </div>
             </div>
 

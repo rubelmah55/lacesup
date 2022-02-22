@@ -103,5 +103,83 @@ All the SCSS File in SCSS Folder of Assets Folder. You can read the doc file als
  // footer - Section 
  @import 'footer';n facts */
 
+.collection-carosuel-nav button {
+    background: transparent;
+}
+.filter_items {
+    background: #FFFFFF;
+    box-shadow: 18px 18px 32px rgb(26 29 33 / 6%);
+    border-radius: 12px;
+    padding: 45px 40px;
+    margin-top: -65px;
+    z-index: 9;
+    position: relative;
+}
+
+select.form-select {
+    border-radius: 4px;
+    padding: 13px 20px;
+}
+
+.reset_filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+button.reset {
+    background: transparent;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: #232833;
+}
 
 
+.reset_filter h3 {
+    margin: 0;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    color: #232833;
+}
+
+#postFormFilter .accordion-item {
+    border: 0;
+    border-bottom: 1px solid #BEBFBF;
+    padding-top: 15px;
+}
+#postFormFilter button.accordion-button {
+    padding: 0;
+    padding-bottom: 15px;
+}
+#postFormFilter .accordion-button:not(.collapsed) {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+#postFormFilter .accordion-button:focus {
+    z-index: 3;
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: none;
+    border: none;
+}
+
+#postFormFilter .accordion-body {
+    padding-left: 27px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+#postFormFilter .form-check {
+    padding: 5px 0;
+}
+
+.product_load_more {
+    margin-top: 40px;
+}

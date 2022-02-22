@@ -94,8 +94,8 @@
              </div>
              <div class="col-lg-4 text-lg-end">
                  <div class="collection-carosuel-nav">
-                     <i class="collection-nav-prev icon-arrow-long-left"></i>
-                     <i class="collection-nav-next icon-arrow-long-right"></i>
+                     <button><i class="collection-nav-prev icon-arrow-long-left"></i></button>
+                     <button><i class="collection-nav-next icon-arrow-long-right"></i></button>
                  </div>
              </div>
          </div>
@@ -302,8 +302,8 @@
      <div class="product-img-grid-bg bg-cover d-none d-lg-block" style="background-image: url('<?php echo $catch['image'];?>')"></div>
  </div>
 
- <div class="popluar-shoes-brand-wrapper padding-160">
-     <div class="container">
+<div class="popluar-shoes-brand-wrapper padding-160">
+    <div class="container">
         <?php 
             $brands = get_field('brands', 'options');
             if(!empty($brands['title'])){
@@ -323,8 +323,8 @@
              </div>
             <?php endforeach; endif; ?>
          </div>
-     </div>
- </div>
+    </div>
+</div>
 
 <?php 
     get_footer();
