@@ -2,7 +2,7 @@
 	/*
 	Template Name: Exclusions
 	*/
-    get_header();
+    get_header('black');
     
  ?>
 

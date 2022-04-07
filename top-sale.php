@@ -43,52 +43,51 @@
 
     <div class="shoes-filter-wrapper">
         <div class="container">
-            <form id="postFormFilter" action="<?php echo esc_url( home_url( '/' ) ); ?>" class="row filter_items" method="get">
+            <form id="postFormFilterforlifestyle" action="<?php echo esc_url( home_url( '/' ) ); ?>" class="row filter_items" method="get">
                 <div class="col-lg-3">
                     <select class="form-select" aria-label="Default select example" name="sort">
-                        <option selected>Sort by</option>
                         <option value="ASC">Sort By: Latest</option>
                         <option value="DSC">Sort By: Oldest</option>
                     </select>
                 </div>
                 <div class="col-lg-3">
                     <select class="form-select" aria-label="Default select example" name="gender">
-                        <option selected>Gender</option>
+                        <option value="">Select Gender</option>
                         <?php 
                             $gender = get_terms([
                                 'taxonomy' => 'gender',
                                 'hide_empty' => true,
                             ]);
                             foreach ($gender as $key => $term){
-                                printf('<option value="%s">%s</option>', $term->slug, $term->name);
+                                printf('<option value="%s">%s</option>', $term->term_id, $term->name);
                             }
                          ?>
                     </select>
                 </div>
                 <div class="col-lg-3">
                     <select class="form-select" aria-label="Default select example" name="brand">
-                        <option selected>Brand</option>
+                        <option value="">Select Brand</option>
                         <?php 
                             $brand = get_terms([
                                 'taxonomy' => 'brand',
                                 'hide_empty' => true,
                             ]);
                             foreach ($brand as $key => $term){
-                                printf('<option value="%s">%s</option>', $term->slug, $term->name);
+                                printf('<option value="%s">%s</option>', $term->term_id, $term->name);
                             }
                          ?>
                     </select>
                 </div>
                 <div class="col-lg-3">
                     <select class="form-select" aria-label="Default select example" name="shoe_type">
-                        <option selected>Footwear Style</option>
+                        <option value="">Select Style</option>
                         <?php 
                             $shoe_type = get_terms([
                                 'taxonomy' => 'shoe_type',
                                 'hide_empty' => true,
                             ]);
                             foreach ($shoe_type as $key => $term){
-                                printf('<option value="%s">%s</option>', $term->slug, $term->name);
+                                printf('<option value="%s">%s</option>', $term->term_id, $term->name);
                             }
                          ?>
                     </select>
@@ -107,38 +106,13 @@
                 }
              ?>
             <div class="product-grid-card">
-                <div class="row">
-                    <?php 
-                        if(!empty($products['select_products'])):
-                            foreach ($products['select_products'] as $product_id):
-
-                            $_product = wc_get_product( $product_id );
-                            $thumbnail = get_the_post_thumbnail_url($product_id);
-                     ?>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                        <div class="single-promo-product-card">
-                            <div class="product-thumb bg-cover" style="background-image: url('<?php echo $thumbnail; ?>');"></div>
-                            <div class="product-content">
-                                <div class="d-flex justify-content-between">
-                                    <a href="<?php echo get_permalink($product_id); ?>"><?php echo $_product->get_title();?></a>
-                                    <div class="product-price ">$<?php echo $_product->get_price();?>.00</div>
-                                </div>
-                                <?php 
-                                    $coupon = get_field('product_coupon_code', $product_id);
-                                    if(!empty($coupon)){
-                                        printf('<div class="promo-code"><span>%s</span></div>', $coupon);
-                                    }
-                                 ?>
-                            </div>
-                        </div>
-                    </div>
-                    <?php endforeach; endif; ?>
+                <div class="row" id="show_lifestyle_product">
                 </div>
             </div>
-            <div class="load-more-btn text-center">
+            <div class="product_load_more text-center">
                 <?php 
                     if(!empty($products['button'])){
-                        printf('<a href="%s" class="theme-btn" target="%s">%s <i class="icon-arrow-right-top"></i></a>', $products['button']['url'],$products['button']['target'], $products['button']['title'] );
+                        printf('<a href="%s" class="theme-btn ajax-loadmore" target="%s">%s <i class="icon-arrow-right-top"></i></a>', $products['button']['url'],$products['button']['target'], $products['button']['title'] );
                     }
                  ?>
             </div>

@@ -2,7 +2,7 @@
 	/*
 	Template Name: FAQ
 	*/
-    get_header();
+    get_header('black');
     
  ?>
 

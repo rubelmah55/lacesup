@@ -14,17 +14,16 @@
     <!-- ===========  All Stylesheet ================= -->
 <?php wp_head(); ?>  
 </head>
-
 <body <?php body_class('body-wrapper'); ?>>
 
-    <header class="header-wrapper">
-        <?php 
-            $header = get_field('header', 'options');
-            $top_bar = $header['top_bar_message'];
-            $logo = $header['logo'];
+    <header class="header-wrapper style-2">
+    	<?php 
+    	    $header = get_field('header', 'options');
+    	    $top_bar = $header['top_bar_message'];
+    	    $logo = $header['logo_black'];
 
-            if(!empty($top_bar)):
-        ?>
+    	    if(!empty($top_bar)):
+    	?>
         <div class="promo-top-bar-wrapper">
             <div class="container text-center text-white">
                 <div class="promo-heading">
@@ -37,13 +36,11 @@
             <div class="container">
                 <div class="row align-items-center justify-content-between">
                     <div class="col-lg-2 col-sm-5 col-md-4 col-6 pr-lg-5">
-                        <div class="logo">
-                            <?php 
-                                if(!empty($logo)){
-                                    printf('<a href="%s"><img src="%s"  alt="Lacesup"></a>', site_url(), $logo);
-                                }
-                             ?>
-                        </div>
+                        <?php 
+                            if(!empty($logo)){
+                                printf('<a href="%s"><img src="%s"  alt="Lacesup"></a>', site_url(), $logo);
+                            }
+                         ?>
                     </div>
                     <div class="col-lg-10 text-end d-none d-lg-flex justify-content-between align-items-center">
                         <div class="menu-wrap">
@@ -106,6 +103,8 @@
                         <div class="overlay"></div>
                     </div>
                 </div>
+
+                <hr class="d-none d-lg-block mb-3">
             </div>
         </div>
     </header>

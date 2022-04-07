@@ -2,9 +2,21 @@
 /*
 Template Name: Promotions & Coupons Code
 */
-get_header();
+get_header('black');
 $banner = get_field('banner');
  ?>
+    <div class="promo-code-bar">
+        <div class="container text-center text-white">
+            <div class="promo-code-text">
+                <?php 
+                    if(!empty($banner['coupon'])){
+                        printf('%s', $banner['coupon']);
+                    }
+                 ?>
+            </div>
+        </div>
+    </div>
+
     <div class="promo-page-banner-wrapper text-center">
         <div class="container">
             <div class="promo-page-heading">
@@ -20,18 +32,6 @@ $banner = get_field('banner');
             </div>
             <div class="nice-arrow d-none d-md-block">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/promo-arrow.png" alt="">
-            </div>
-        </div>
-    </div>
-
-    <div class="promo-code-bar">
-        <div class="container text-center text-white">
-            <div class="promo-code-text">
-                <?php 
-                    if(!empty($banner['coupon'])){
-                        printf('%s', $banner['coupon']);
-                    }
-                 ?>
             </div>
         </div>
     </div>

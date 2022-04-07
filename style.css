@@ -147,7 +147,10 @@ button.reset {
     line-height: 36px;
     color: #232833;
 }
-
+#postFormFilter .accordion-item:first-child{
+    border-top: 1px solid #BEBFBF;
+    border-radius: 0;
+}
 #postFormFilter .accordion-item {
     border: 0;
     border-bottom: 1px solid #BEBFBF;
@@ -186,4 +189,64 @@ button.reset {
 
 .breadcrumb img{
     margin-left: 10px;
+}
+
+.breadcrumb-wrapper{
+    padding-bottom: 0;
+    padding-top: 70px;
+}
+
+.page-banner-wrap, .shop-page-banner{
+    padding-top: 135px;
+}
+
+.woocommerce .woocommerce-breadcrumb a{
+    color: #8097D1;
+}
+
+.woocommerce .woocommerce-breadcrumb a:hover{
+    color: #EE4F4F;
+}
+
+.shope-sidebar-wrapper{
+    padding-right: 30px;
+}
+
+.ajax-preloader {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.header-right-element .search-box, .action-bar .search-box {
+    margin-right: 0;
+}
+
+#ajaxsearchlite1 .probox, div.asl_w .probox, #ajaxsearchlite1 .probox .proinput input, div.asl_w .probox .proinput input{
+    height: 44px !important;
+}
+div.asl_w .probox .promagnifier{
+    width: 44px !important;
+    height: 44px !important;
+}
+
+div.asl_w .probox .proloading, div.asl_w .probox .proclose, div.asl_w .probox .promagnifier, div.asl_w .probox .prosettings {
+    height: 44px !important;
+}
+
+.style-2 #ajaxsearchlite1 .probox, .style-2 div.asl_w .probox{
+    background-image: none !important;
+    background: #8097D1 !important;
+    border: 1px solid #BEC0C2 !important;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.style-2 div.asl_w{
+    background-image: none !important;
+    background: transparent !important;
+}
+
+.style-2 #ajaxsearchlite1 .probox .proinput input, .style-2 div.asl_w .probox .proinput input{
+    border: 0 !important;
+    color: #000 !important;
 }

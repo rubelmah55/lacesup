@@ -2,7 +2,7 @@
 /*
 Template Name: Contact
 */
-	get_header();
+	get_header('black');
 
 	$banner = get_field('banner');
 ?>

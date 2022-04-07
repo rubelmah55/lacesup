@@ -1,9 +1,9 @@
 <?php 
-    get_header();
+    get_header('black');
     $term = get_queried_object();
     $banner = get_field('banner', $term);
  ?>
-
+    <div id="cat_name" data-id="<?php echo $term->slug; ?>"></div>
     <div class="shop-page-banner bg-cover" style="background-image: url('<?php echo $banner['bg']; ?>')">
         <div class="container">
             <div class="page-heading text-white">
@@ -41,7 +41,7 @@
                                             'hide_empty' => true,
                                         ]);
                                         foreach ($shoe_type as $key => $term):
-                                     ?>
+                                    ?>
                                     <div class="form-check">
                                       <input class="form-check-input" type="checkbox" value="<?php echo $term->term_id; ?>" name="<?php echo $term->taxonomy; ?>[]" id="<?php echo $term->slug; ?>">
                                       <label class="form-check-label" for="<?php echo $term->slug; ?>">

@@ -192,7 +192,14 @@
                              <a href="<?php echo get_permalink($product_id); ?>"><?php echo $_product->get_title();?></a>
                              <div class="d-flex">
                                  <div class="product-price mr-30">$<?php echo $_product->get_price();?>.00</div>
-                                 <div class="product-attribute">2 colors</div>
+                                 <?php 
+                                    $color = get_field('how_many_color_you_have_for_this_product', $product_id);
+
+                                    if(!empty($color)){
+                                        printf('<div class="product-attribute">%s colors</div>', $color);
+                                    }
+                                  ?>
+                                 
                              </div>
                          </div>
                      </div>
